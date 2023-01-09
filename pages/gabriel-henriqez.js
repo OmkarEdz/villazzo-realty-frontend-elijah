@@ -165,8 +165,8 @@ const TeamsInside = ({
 				<div className="properties">
 					<h1 className="team-heading">FEATURED PROPERTIES</h1>
 					<div className="property-wrap">
-						{mainPropertyList.map((element) => (
-						<div key={mainPropertyList.key} className="property-box">
+						{mainPropertyList.map((element, index) => (
+						<div key={index} className="property-box">
 							<p className="img_Wrap">
 								<Image
 									loader={myLoader}
@@ -183,7 +183,7 @@ const TeamsInside = ({
 					</div>
 				</div>
 				<div className="video-btn contact-btn">
-					<a href="javascript:;" onClick={onAddClick}>CONTACT US</a>
+					<a onClick={onAddClick}>CONTACT US</a>
 				</div>
 				<div className="find-hotel">
 					<a href="https://www.villazzo.com">Find Out More About Our Villa Hotels</a>
@@ -195,7 +195,7 @@ const TeamsInside = ({
             <div className="custom_model">
               <div className="custom_model_dialog">
                   <div className="custom_model_content">
-                    <a href="javascript:;" onClick={onRemoveClick} className="model_close"><i className="fa-solid fa-xmark"></i></a>
+                    <a onClick={onRemoveClick} className="model_close"><i className="fa-solid fa-xmark"></i></a>
                     <div className="Popup_wrap">
                       <form onSubmit={handleSubmit}>
                         <div className="contact-form">

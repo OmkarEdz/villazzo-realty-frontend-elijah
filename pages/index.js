@@ -92,10 +92,6 @@ const Home = ({
       tempErrors["phone"] = true;
       isValid = false;
     }
-    if (message.length <= 0) {
-      tempErrors["message"] = true;
-      isValid = false;
-    }
 
     setErrors({ ...tempErrors });
     console.log("errors", errors);
@@ -265,14 +261,14 @@ const Home = ({
                     </a>
                   </p>
                   <div className="dropdownMenu">
-                    <p><a href="mailto:Lisa.Blake@Villazzo.com">Lisa.Blake@Villazzo.com</a></p>
+                    <p><a href="mailto:villazzorealty@villazzo.com">villazzorealty@villazzo.com</a></p>
                     <p><a href="tel:+1 (305) 340-2727">+1 (305) 340-2727</a></p>
                   </div>
                 </div>
               </div>
             </div>
             <div className="inqury-btn">
-              <a href="javascript:;"  onClick={onAddClick}>INQUIRE</a>
+              <a onClick={onAddClick}>INQUIRE</a>
             </div>
           </div>
           <nav className="navbar navbar-expand-lg navbar-light bg-light hideOnMob">
@@ -338,7 +334,7 @@ const Home = ({
                   <Link href="/buy">BUY</Link>
                 </div>
                 <div className="sell-btn">
-                  <Link href="/buy">RENT</Link>
+                  <Link href="/rent">RENT</Link>
                 </div>
             </div>
         </div>
@@ -347,7 +343,7 @@ const Home = ({
             <div className="custom_model">
               <div className="custom_model_dialog">
                   <div className="custom_model_content">
-                    <a href="javascript:;" onClick={onRemoveClick} className="model_close"><i className="fa-solid fa-xmark"></i></a>
+                    <a onClick={onRemoveClick} className="model_close"><i className="fa-solid fa-xmark"></i></a>
                     <div className="Popup_wrap">
                       <form onSubmit={handleSubmit}>
                         <div className="contact-form">
@@ -426,9 +422,6 @@ const Home = ({
                                 }}
                                 className="form-message contact-lebel" rows="4" cols="50" placeholder="MESSAGE">
                               </textarea>
-                              {errors?.message && (
-                                <p className="error_msg">Message cannot be empty.</p>
-                              )}
                             </div>
                           </div>
                           <div className="submit_btn_wrap">

@@ -84,10 +84,6 @@ const Sell = ({
       tempErrors["phone"] = true;
       isValid = false;
     }
-    if (message.length <= 0) {
-      tempErrors["message"] = true;
-      isValid = false;
-    }
 
     setErrors({ ...tempErrors });
     console.log("errors", errors);
@@ -167,7 +163,7 @@ const Sell = ({
               </div> */}
               <div className="sell-search-box">
                 <div className="video-btn contact-btn">
-                  <a href="javascript:;"  onClick={onAddClick}>Contact Us</a>
+                  <a onClick={onAddClick}>Contact Us</a>
                 </div>
               </div>
             </div>
@@ -175,7 +171,7 @@ const Sell = ({
               <div className="custom_model">
                 <div className="custom_model_dialog">
                   <div className="custom_model_content">
-                    <a href="javascript:;" onClick={onRemoveClick} className="model_close"><i className="fa-solid fa-xmark"></i></a>
+                    <a onClick={onRemoveClick} className="model_close"><i className="fa-solid fa-xmark"></i></a>
                     <div className="Popup_wrap">
                       <form onSubmit={handleSubmit}>
                         <div className="contact-form">
@@ -254,9 +250,6 @@ const Sell = ({
                                 }}
                                 className="form-message contact-lebel" rows="4" cols="50" placeholder="MESSAGE">
                               </textarea>
-                              {errors?.message && (
-                                <p className="error_msg">Message cannot be empty.</p>
-                              )}
                             </div>
                           </div>
                           <div className="submit_btn_wrap">

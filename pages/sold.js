@@ -39,8 +39,8 @@ const Sold = ({
 					</span>
 				</h1>
 				<div className="property-wrap">
-					{mainsoldPropList.map((element) => (
-					<div key={mainsoldPropList.key} className="property-box">
+					{mainsoldPropList.map((element, index) => (
+					<div key={index} className="property-box">
 						<p className="img_Wrap">
 							<Image
 								loader={myLoader}

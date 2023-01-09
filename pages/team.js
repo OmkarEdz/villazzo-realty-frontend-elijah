@@ -139,7 +139,7 @@ const Teams = ({
             <h1 className="team-heading team">MEET THE TEAM</h1>
             <div className="meet-wrap">
               {teamspage.attributes.Member.map((element, index) => (
-              <div key={element.key} className="meet-left main-team">
+              <div key={index} className="meet-left main-team">
                 <p className="meet-left-img">
                   <Image
                     loader={myLoader}
@@ -160,7 +160,7 @@ const Teams = ({
               ))}
             </div>
             <div className="inqury-btn contact-btn">
-              <a href="javascript:;" onClick={onAddClick}>CONTACT US</a>
+              <a onClick={onAddClick}>CONTACT US</a>
             </div>
             <div className="find-hotel">
               <a href="https://www.villazzo.com">Find Out More About Our Villa Hotels</a>
@@ -190,7 +190,7 @@ const Teams = ({
             <div className="custom_model">
               <div className="custom_model_dialog">
                   <div className="custom_model_content">
-                    <a href="javascript:;" onClick={onRemoveClick} className="model_close"><i className="fa-solid fa-xmark"></i></a>
+                    <a onClick={onRemoveClick} className="model_close"><i className="fa-solid fa-xmark"></i></a>
                     <div className="Popup_wrap">
                       <form onSubmit={handleSubmit}>
                         <div className="contact-form">

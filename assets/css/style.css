@@ -140,6 +140,8 @@ body {
   font-family: 'Gotham';
 }
 
+a {cursor:pointer;}
+
 img {
   width: initial !important;
   height: initial !important;
@@ -827,13 +829,13 @@ h3.propertytxt {
 }
 .cursor {cursor: pointer;}
 /*TeamInside css start*/
-.meet-wrap{display: flex;justify-content: space-between;flex-wrap: wrap;margin: 15px 0px 60px;width: 100%;}
+.meet-wrap{display: flex;justify-content: flex-start;flex-wrap: wrap;margin: 15px 0px 60px;width: 100%;}
 .meet-wrap:before {content: '';width: 30%;order:0;}
 .meet-wrap:after {content: '';width: 30%;order:2;}
 .team-heading{text-align: center;font-size: 55px;line-height: 55px;text-transform: uppercase;color: #222222;font-weight: 300;border-bottom: 3px solid #f7dd80;font-family: "Gotham",sans-serif;width: 100%;margin-top: 55px;padding-bottom: 25px;}
 .team-heading.team{margin-bottom: 0px;border-bottom: unset;padding-bottom: 0px;margin-bottom: 15px;}
 .meet-left{width: 34%;text-align: center;order: 3;margin: 30px 0px;}
-.meet-left.main-team {width: 32%;text-align: center;order: 3;margin: 30px 0px;}
+.meet-left.main-team {width:31.4%;text-align: center;order: 3;margin: 30px 10px;}
 .meet-left:first-child {order:1;}
 .meet-right{width: 66%;padding-right: 20px;}
 .meet-right p {letter-spacing: 1px;line-height: 35px;color: #222222;font-weight: 400;font-family: "Lato",ui-sans-serif;text-align: justify;font-size: 22px;}
@@ -841,7 +843,7 @@ h3.propertytxt {
 .meet-left:first-child .meet-left-img {margin:0px auto 45px;}
 .meet-left .meet-left-img span {position: unset !important;display: block !important;overflow: hidden !important;border-radius: 50%;width: 221px !important;height: 221px !important;margin:auto !important;}
 .meet-left .meet-left-img img{width: 100% !important;}
-.meet-left-name{font-size: 28px;letter-spacing: 1px;line-height: 40px;text-transform: uppercase;color: #222222;font-weight: 700;font-family: "Lato",ui-sans-serif;text-align: center;margin:0px 0px 5px;}
+.meet-left-name{font-size: 25px;letter-spacing: 1px;line-height: 40px;text-transform: uppercase;color: #222222;font-weight: 700;font-family: "Lato",ui-sans-serif;text-align: center;margin:0px 0px 5px;}
 .meet-left:first-child .meet-left-name {margin-bottom: 10px;}
 .meet-left-name .meet-left-name-link {color: #222;text-decoration: none;}
 .meet-left-name .meet-left-name-link:hover {color: #f8de7f;}
@@ -1015,6 +1017,10 @@ h3.propertytxt {
   body .container {max-width: 1520px;}
 }
 
+@media (min-width: 1360px){
+  .broker, .number, .email {font-size: 20px;}
+}
+
 @media only screen and (max-width: 1750px) {
   .toll-wrap {width: 80%;}
   .footer-sec1 .toll-wrap, .footer-sec1 .toll-wrap p, .navigate-wrap p, .navigate-sec1 a, .toll-wrap a {font-size: 16px;}
@@ -1054,6 +1060,9 @@ h3.propertytxt {
   .video-content {font-size: 18px;line-height: 26px;}
   .video-box {margin: 0 0 80px;}
   .videos_pg_wrap .buttons-wrap.video-wrapper .sold-btn a {margin-top:0px;}
+
+  .navbar-light .navbar-nav .nav-item:nth-child(2):hover .dropdown-menu {left:-50%;}
+  .navbar-light .navbar-nav .nav-item:nth-child(3):hover .dropdown-menu {left:-20%;}
 }
 
 @media only screen and (max-width: 1400px) {
@@ -1082,6 +1091,8 @@ h3.propertytxt {
   .buy-search-box label, .form-control {font-size: 14px;}
   .inquiry-wrap {padding-top: 0px;}
   .sell-search-container.buy {width: 65%;}
+  .navbar-light .navbar-nav .nav-item:nth-child(2):hover .dropdown-menu {left:-60%;}
+  .navbar-light .navbar-nav .nav-item:nth-child(3):hover .dropdown-menu {left:-30%;}
 }
 
 @media only screen and (max-width: 1200px) {
@@ -1178,6 +1189,9 @@ h3.propertytxt {
   .sell-search-box .contact-btn a {padding: 12px 40px;line-height: 14px;font-size: 14px;width: unset;height: unset;}
 
   .selltxt p, .final_msg_wrap .error_msg, .final_msg_wrap .thankyou_msg {line-height: 30px;font-size: 20px;}
+
+  .navbar-light .navbar-nav .nav-item:nth-child(2):hover .dropdown-menu {left:-75%;}
+  .navbar-light .navbar-nav .nav-item:nth-child(3):hover .dropdown-menu {left:-40%;}
 }
 
 @media only screen and (max-width: 1024px) {
@@ -1213,6 +1227,9 @@ h3.propertytxt {
   .video-modal .custom_model_dialog iframe {width: 500px;height: 300px;}
 
   .property-box img {height: 220px !important;}
+
+  .navbar-light .navbar-nav .nav-item:nth-child(2):hover .dropdown-menu {left:-40%;}
+  .navbar-light .navbar-nav .nav-item:nth-child(3):hover .dropdown-menu {left:-20%;}
 }
 
 @media only screen and (max-width: 991px) {

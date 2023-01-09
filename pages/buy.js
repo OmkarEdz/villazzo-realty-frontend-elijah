@@ -93,7 +93,7 @@ const Buy = ({ global, homepage, footerData, navigation }) => {
                       step={100}
                       initial={100}
                       min={100}
-                      max={100000}
+                      max={250000000}
                       values={state.values}
                       onChange={(values) => setState({ values })}
                       renderTrack={({ props, children }) => (

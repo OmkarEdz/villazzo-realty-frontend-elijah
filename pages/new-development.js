@@ -144,7 +144,7 @@ const NewDevelopment = ({
 				<h1 className="sold-heading">NEW DEVELOPMENT</h1>
 				<div className="property-wrap">
 					{newdevelopmentpage.attributes.Proprties.map((element, index) => (
-					<div key={element.key} className="property-box">
+					<div key={index} className="property-box">
 						<p className="img_Wrap">
 							<Image
 								loader={myLoader}
@@ -162,7 +162,7 @@ const NewDevelopment = ({
 					))}
 				</div>
 				<div className="video-btn contact-btn">
-					<a href="javascript:;" onClick={onAddClick}>Contact Us</a>
+					<a onClick={onAddClick}>Contact Us</a>
 				</div>	
 				<div className="find-hotel">
 					<a href="https://www.villazzo.com/">Find Out More About Our Villa Hotels</a>
@@ -172,7 +172,7 @@ const NewDevelopment = ({
               <div className="custom_model">
                 <div className="custom_model_dialog">
                   <div className="custom_model_content">
-                    <a href="javascript:;" onClick={onRemoveClick} className="model_close"><i className="fa-solid fa-xmark"></i></a>
+                    <a onClick={onRemoveClick} className="model_close"><i className="fa-solid fa-xmark"></i></a>
                     <div className="Popup_wrap">
                       <form onSubmit={handleSubmit}>
                         <div className="contact-form">

@@ -66,10 +66,6 @@ const Footer = ({ footerProp }) => {
       tempErrors["phone"] = true;
       isValid = false;
     }
-    if (message.length <= 0) {
-      tempErrors["message"] = true;
-      isValid = false;
-    }
 
     setErrors({ ...tempErrors });
     console.log("errors", errors);
@@ -156,7 +152,7 @@ const Footer = ({ footerProp }) => {
                           <a href={value.URL} key={`left-links${index}`}>{value.Label}</a>
                         </div>
                       ))}
-                      <div className="navigate-sec1"><a href="javascript:;" onClick={onAddClick}>CONTACT</a></div>
+                      <div className="navigate-sec1"><a onClick={onAddClick}>CONTACT</a></div>
                     </div>
                     <div className="navigate-links">
                       {footerProp.attributes.navigateLinksRight.map((value, index) => (
@@ -250,7 +246,7 @@ const Footer = ({ footerProp }) => {
             <div className="custom_model">
               <div className="custom_model_dialog">
                   <div className="custom_model_content">
-                    <a href="javascript:;" onClick={onRemoveClick} className="model_close"><i className="fa-solid fa-xmark"></i></a>
+                    <a onClick={onRemoveClick} className="model_close"><i className="fa-solid fa-xmark"></i></a>
                     <div className="Popup_wrap">
                       <form onSubmit={handleSubmit}>
                         <div className="contact-form">
@@ -329,9 +325,6 @@ const Footer = ({ footerProp }) => {
                                 }}
                                 className="form-message contact-lebel" rows="4" cols="50" placeholder="MESSAGE">
                               </textarea>
-                              {errors?.message && (
-                                <p className="error_msg">Message cannot be empty.</p>
-                              )}
                             </div>
                           </div>
                           <div className="submit_btn_wrap">

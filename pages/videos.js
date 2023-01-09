@@ -61,18 +61,18 @@ const Videos = ({
           <div className="buttons-wrap video-wrapper">
             <h1 className="video-heading">VIDEOS</h1>
             <div className={`video-wrap ${showMore ? "show-all" : ""}`}>
-              {mainvideosList.map((element) => (
-              <div key={mainvideosList.key} className="video-box">
+              {mainvideosList.map((element, index) => (
+              <div key={index} className="video-box">
                 <div className="video_item_wrap" data-url={element.youtubeEmebedURL}>
                   <iframe src={element.youtubeEmebedURL} title="YouTube video player"></iframe>
-                  <a href="javascript:;" className="youtubeIcon" onClick={youtubeVideo}></a>
+                  <a className="youtubeIcon" onClick={youtubeVideo}></a>
                 </div>
                 <h2 className="video-name">{element.heading}</h2>
                 <p className="video-content">{element.subheading}</p>
               </div>
               ))}
               <div className="video-btn contact-btn sold-btn moreBtnHide" ref={moreBtn}>
-                <a href="javascript:;" onClick={() => setShowMore(!showMore)}>
+                <a onClick={() => setShowMore(!showMore)}>
                   {showMore ? "Less" : "More"}
                 </a>
               </div>
@@ -81,7 +81,7 @@ const Videos = ({
               <div className="custom_model">
                 <div className="loader" ref={mdlLoader}></div>
                 <div className="custom_model_dialog" ref={mdlContent}>
-                  <a href="javascript:;" onClick={onCloseClick}><i className="fa-solid fa-xmark"></i></a>
+                  <a onClick={onCloseClick}><i className="fa-solid fa-xmark"></i></a>
                   <iframe ref={mdlIframe} id="popupIframe" src="https://www.youtube.com/embed/fx3kvqPuTB4" title="YouTube video player"></iframe>
                 </div>    
               </div>
