@@ -110,6 +110,24 @@ const Teams = ({
         }
       );
       
+      const qs = require('qs');
+        axios.post('https://webdevfolio.com/Villazzomail/Villazzomail.php',  qs.stringify({
+            "firstName": fullname,
+            "lastName": lastName,
+            "email": email,
+            "phoneNo": phone,
+            "message": message,
+
+        }))
+        .then((res) => {
+          console.log(`statusCode: ${res.statusCode}`)
+          console.log(res)
+          console.log(`statusCode: ${res.data}`)
+        })
+        .catch((error) => {
+          console.error(error)
+        })
+
       setShowSuccessMessage(true);
       setShowFailureMessage(false);
       // Reset form fields
