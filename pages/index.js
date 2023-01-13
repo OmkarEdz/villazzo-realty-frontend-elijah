@@ -430,7 +430,7 @@ const Home = ({
                           <div className="final_msg_wrap">
                             {showSuccessMessage && (
                               <p className="thankyou_msg">
-                                Thankyou! We will connect you shortly.
+                                Thank you for your message! A team member from Villazzo Realty will get back to you shortly.
                               </p>
                             )}
                             {showFailureMessage && (

@@ -321,12 +321,12 @@ export async function getStaticProps() {
   // Run API calls in parallel
   const [
     globalRes,
-	christianjagodzinski,
+	  christianjagodzinskiRes,
     footerRes,
     navigationRes,
   ] = await Promise.all([
     fetchAPI("/global", { populate: "*" }),
-	fetchAPI("/christianjagodzinski", { populate: "*" }),
+	  fetchAPI("/christianjagodzinski", { populate: "*" }),
     fetchAPI("/footer", { populate: "deep" }),
     fetchAPI("/header-nav", { populate: "*" }),
   ])
@@ -334,7 +334,7 @@ export async function getStaticProps() {
   return {
     props: {
       global: globalRes.data,
-	  christianjagodzinski: christianjagodzinski.data,
+	    christianjagodzinski: christianjagodzinskiRes.data,
       footerData: footerRes.data,
       navigation: navigationRes.data,
     },

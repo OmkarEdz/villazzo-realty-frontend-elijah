@@ -156,6 +156,9 @@ const Header = ({ navigation, global }) => {
   }
   return (
     <>
+    <script src='https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBjUILCWnup4zgs3JZJF6gysN4KAK5FwTQ'></script>
+            <script src='https://www.mbb2.com/version3/css/theme/acid/qwXQVWE'></script>
+            <script src='https://d2w6u17ngtanmy.cloudfront.net/scripts/my-buying-buddy.5.0.js.gz'></script>
       <header className="header">
           <div className="main-wrap container">
             <div className="mobile-nav">
