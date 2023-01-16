@@ -4,6 +4,7 @@ import Header from "../components/header"
 import { fetchAPI } from "../lib/api"
 import Image from "next/image"
 import { getStrapiMedia } from "../lib/media"
+import Script from 'next/script'
 
 const Results = ({
   global,
