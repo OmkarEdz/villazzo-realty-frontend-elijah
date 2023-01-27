@@ -54,12 +54,10 @@ const SearchNew = ({ global, homepage, footerData, navigation }) => {
                 <div className="row">
                   <div className="col-md-4">
                     <label className="">LOCATION</label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      onChange={(e) => setLocation(e.target.value)}
-                      placeholder="CITY, REGION"
-                    />
+                    <input type="text" name="area_search" placeholder="City, Region" aria-label="City, Region" className="bfg-input-field bfg-input-area-field form-control" />
+		                <input type="hidden" name="city" className="bfg-input-area-city" />
+                    <input type="hidden" name="sub_area" className="bfg-input-area-sub_area" />
+		                <input type="hidden" name="zip_code" className="bfg-input-area-zip_code" />
                   </div>
                   <div className="col-md-3 prop_type">
                     <label className="">PROPERTY TYPE</label>
