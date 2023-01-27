@@ -733,6 +733,21 @@ h3.propertytxt {
 .search-button:hover{
   color:#000;
 }
+.search-icon-box input {
+  background: #f7dd80;
+  border: 1px solid #f7dd80;
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 700;
+  font-family: "Lato",ui-sans-serif;
+}
+.search-icon-box input:hover {
+  color: #222;
+}
 .buy-search-box {
   width:100%;
   background-color: #fff;

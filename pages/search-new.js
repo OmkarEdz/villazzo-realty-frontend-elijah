@@ -23,16 +23,14 @@ const SearchNew = ({ global, homepage, footerData, navigation }) => {
   const MBB = { mbbUrl: 'https://www.mbb2.com/version3', seo : 'false' };
   MBB.data = { acid : 'qwXQVWE' };
 
-  const MBBv3_SubmitCustomSearchForm = (event) => {
-    event.preventDefault();
-    let searchURL = 'http://www.villazzorealty.com/results'
+  function MBBv3_SubmitCustomSearchForm(formId,url) {
+    let searchURL = 'https://www.villazzorealty.com/results'
     router.push(searchURL)
   }
   return (
     <>
     <Script src='https://www.mbb2.com/version3/css/theme/acid/qwXQVWE' />
-    
-    <Script src='https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBjUILCWnup4zgs3JZJF6gysN4KAK5FwTQ' />
+    <Script src='https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBjUILCWnup4zgs3JZJF6gysN4KAK5FwTQ&callback=initMap%27' />
     <Script src='https://d2w6u17ngtanmy.cloudfront.net/scripts/my-buying-buddy.5.0.js.gz' />
     
       <div className="bg-img">
@@ -50,7 +48,8 @@ const SearchNew = ({ global, homepage, footerData, navigation }) => {
               <h3 className="propertytxt">THE PERFECT HOME FOR YOU</h3>
               <p>Villazzo is here to help acquire your dream home or condo. We have helped many clients successfully secure their new residence in South Florida. Let us do the same for you.</p>
             </div>
-            <form id="Form-1">
+            <div className="buy-search-box">
+              <form id="Form-1">
                 <input type="hidden" name="mls_id" value="fl133" />
                 <div className="row">
                   <div className="col-md-4">
@@ -81,7 +80,7 @@ const SearchNew = ({ global, homepage, footerData, navigation }) => {
                       <option value="10">Vacation/Time-Share</option>
                     </select>
                   </div>
-                  <div className="col-md-4">
+                  <div className="col-md-3">
                     <label className="">PRICE RANGE</label>
                     <Range
                       step={100}
@@ -124,14 +123,13 @@ const SearchNew = ({ global, homepage, footerData, navigation }) => {
                       {currencyFormat(state.values[0])}
                     </output>
                   </div>
-                  <div className="col-md-1 search-icon-box">
-                  <input name="submit" type="button" onclick="MBBv3_SubmitCustomSearchForm('Form-1','http://www.charliesmithrealty.com/results');" value="Search!"  />
+                  <div className="col-md-2 search-icon-box">
+                  {/* <input name="submit" type="button" onClick="MBBv3_SubmitCustomSearchForm('Form-1','http://www.charliesmithrealty.com/results');" value="Search!"  /> */}
+                  <input name="submit" type="button" onClick={()=> MBBv3_SubmitCustomSearchForm('Form-1','https://www.villazzorealty.com/results')} value="Search!"  />
                   </div>
                 </div>  
               </form>
-              
-
-
+            </div>
           </div>
         </div>
       </div>
