@@ -20,8 +20,8 @@ const SearchNew = ({ global, homepage, footerData, navigation }) => {
     return '$' + num.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
   }
 
-  const MBB = { mbbUrl: 'https://www.mbb2.com/version3', seo : 'false' };
-  MBB.data = { acid : 'qwXQVWE' };
+  // const MBB = {seo : "false",data:{ acid : "qwXQVWE" } };
+  // function mbbMapLoaded(){ MBB.googleMaps = true; };
 
   function MBBv3_SubmitCustomSearchForm(formId,url) {
     let searchURL = 'https://www.villazzorealty.com/results'
@@ -30,6 +30,12 @@ const SearchNew = ({ global, homepage, footerData, navigation }) => {
   return (
     <>
       <Script src="https://www.mbb2.com/version3/css/theme/acid/qwXQVWE"></Script>
+      <Script id="my-script">
+        {`
+          const MBB = {seo : "false",data:{ acid : "qwXQVWE" } };
+          function mbbMapLoaded(){ MBB.googleMaps = true; }
+        `}
+      </Script>
       <Script src="https://maps.googleapis.com/maps/api/js?callback=mbbMapLoaded&libraries=places&key=AIzaSyBjUILCWnup4zgs3JZJF6gysN4KAK5FwTQ"></Script>
       <Script src="https://d2w6u17ngtanmy.cloudfront.net/scripts/my-buying-buddy.5.0.js.gz"></Script>
       <div className="bg-img">
