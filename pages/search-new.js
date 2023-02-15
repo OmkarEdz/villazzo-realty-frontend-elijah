@@ -23,10 +23,10 @@ const SearchNew = ({ global, homepage, footerData, navigation }) => {
   // const MBB = {seo : "false",data:{ acid : "qwXQVWE" } };
   // function mbbMapLoaded(){ MBB.googleMaps = true; };
 
-  function MBBv3_SubmitCustomSearchForm(formId,url) {
-    let searchURL = 'https://www.villazzorealty.com/results'
-    router.push(searchURL)
-  }
+  // function MBBv3_SubmitCustomSearchForm(formId,url) {
+  //   let searchURL = 'https://www.villazzorealty.com/results'
+  //   router.push(searchURL)
+  // }
   return (
     <>
       <Script src="https://www.mbb2.com/version3/css/theme/acid/qwXQVWE"></Script>
