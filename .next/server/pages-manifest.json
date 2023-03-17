@@ -2,8 +2,5 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/search-new": "pages/search-new.js",
-  "/": "pages/index.js",
-  "/buy": "pages/buy.js",
-  "/rent": "pages/rent.js"
+  "/": "pages/index.js"
 }

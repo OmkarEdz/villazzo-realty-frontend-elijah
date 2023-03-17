@@ -12,7 +12,7 @@ const Rent = ({ global, homepage, footerData, navigation }) => {
     return `${src}?w=${width}&q=${quality || 75}`
   }
   const router = useRouter()
-  let defaultState = { values: [100] }
+  let defaultState = { values: [1000000] }
   let [state, setState] = useState(defaultState)
   const [location, setLocation] = useState("")
   const [propertyType, setPropertyType] = useState("8")
@@ -63,6 +63,7 @@ const Rent = ({ global, homepage, footerData, navigation }) => {
                       placeholder="PROPERTY TYPE"
                       onChange={(e) => setPropertyType(e.target.value)}
                     >
+                      <option value="1">Single Family</option>
                       <option value="8">Commercial</option>
                       <option value="2">Condo/Townhouse/Co-Op</option>
                       <option value="4">Farms/Ranch</option>
@@ -71,17 +72,16 @@ const Rent = ({ global, homepage, footerData, navigation }) => {
                       <option value="6">Multi Family</option>
                       <option value="5">Rental Properties</option>
                       <option value="7">Residential Income</option>
-                      <option value="7">Single Family</option>
                       <option value="10">Vacation/Time-Share</option>
                     </select>
                   </div>
                   <div className="col-md-3">
                     <label className="">PRICE RANGE</label>
                     <Range
-                      step={100}
-                      initial={100}
-                      min={100}
-                      max={250000000}
+                      step={20}
+                      initial={1000000}
+                      min={1000000}
+                      max={20000000}
                       values={state.values}
                       onChange={(values) => setState({ values })}
                       renderTrack={({ props, children }) => (

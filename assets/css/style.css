@@ -158,7 +158,7 @@ img {
 .homepage-image {
   position: fixed;
   display: block;
-  z-index: -1;
+  z-index: 0;
   width: 100%;
   height: 100%;
   /* background: #347fc8; */
@@ -174,13 +174,28 @@ img {
   height: 100% !important;
   object-fit: cover !important;
 }
+.homepage-image video{
+  opacity:0;
+}
+.loadVdo .homepage-image video{
+  opacity:1;
+}
 .bg-img {
   min-height: 1057px;
   /* background:url('../images/video/desktop.mp4'); */
+  background: url(https://admin.villazzorealty.com/uploads/load_Img_d0ef159dbb.jpg?updated_at=2023-03-17T04:34:42.114Z);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
 }
+.bg-img .header, .footer-bg-color, .footer-bottom {
+  z-index: 99;
+  position: relative;
+}
+.bg-img .buttons-wrap {
+  z-index: 9;
+  position: relative;
+}
+.bg-img.bg-white {background: #fff;}
 .mobile-inquiry-call {
   display:none;
 }
