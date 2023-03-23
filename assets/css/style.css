@@ -994,7 +994,7 @@ h3.propertytxt {
 .input-name{margin-right: 10px;}
 .input-name:placeholder{font-size: 18px;}
 .contact-form h2{font-size: 55px;text-align: center;font-weight: 300;padding-bottom: 20px;}
-.submit_btn_wrap button {color: #fff;text-decoration: none;background-color: #f7dd7f;border: 1px solid #f7dd7f;padding: 10px 35px;font-size: 20px;text-transform: uppercase;letter-spacing: 1px;line-height: 30px;font-weight: 400;font-family: "Lato",ui-sans-serif;}
+.submit_btn_wrap button {color: #000;text-decoration: none;background-color: #f7dd7f;border: 1px solid #f7dd7f;padding: 10px 35px;font-size: 20px;text-transform: uppercase;letter-spacing: 1px;line-height: 30px;font-weight: 400;font-family: "Lato",ui-sans-serif;}
 .submit_btn_wrap button:hover{background-color: #fff;color: #000;border: 1px solid #f8de7f;}
 .popup-submit-btn{margin-top: 15px;}
 .contact-lebel{background-color: #fbf9fa;width: 100%;border: 1px solid #ccc;font-size: 20px;padding: 5px 0px 8px 10px;}

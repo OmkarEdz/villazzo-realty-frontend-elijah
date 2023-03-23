@@ -25,10 +25,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/rent": [
+    "/buy": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/rent.js"
+      "static/chunks/pages/buy.js"
+    ],
+    "/new-development": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/new-development.js"
     ]
   },
   "ampFirstPages": []
