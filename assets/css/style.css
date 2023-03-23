@@ -502,7 +502,7 @@ color: #fff;
 }
 .footer-icons {
   display: flex;
-  margin-top: 80px;
+  margin-top: 65px;
   align-items: center;
 }
 .footer-icons p {
@@ -678,7 +678,8 @@ h3.propertytxt {
   line-height: 35px;
   color: #fff;
   font-weight: 400;
-  font-family: "Lato",ui-sans-serif;
+  /* font-family: "Lato",ui-sans-serif; */
+  font-family: "Gotham Light", sans-serif;
   font-size: 22px;
 }
 .centered {
@@ -756,9 +757,10 @@ h3.propertytxt {
   font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
-  color: #fff;
+  color: #000;
   font-weight: 700;
-  font-family: "Lato",ui-sans-serif;
+  /* font-family: "Lato",ui-sans-serif; */
+  font-family: "Gotham", sans-serif;
 }
 .search-icon-box input:hover {
   color: #222;
@@ -771,24 +773,26 @@ h3.propertytxt {
 }
 .buy-search-box label {
   font-size: 18px;
-  letter-spacing: 1px;
+  letter-spacing: 0px;
   line-height: 18px;
   text-transform: uppercase;
   color: #222222;
   font-weight: 700;
-  font-family: "Lato",ui-sans-serif;
+  /* font-family: "Lato",ui-sans-serif; */
+  font-family: "Gotham Medium", sans-serif;
   margin-bottom: 10px;
 }
 .buy-search-box .form-control {
   border-radius: 2px;
   border-color: #e1dfe0;
   font-size: 18px;
-  letter-spacing: 1px;
+  letter-spacing: 0px;
   line-height: 1;
   text-transform: uppercase;
   color: #b5babc;
   font-weight: 700;
-  font-family: "Lato",ui-sans-serif;
+  /* font-family: "Lato",ui-sans-serif; */
+  font-family: "Gotham Medium", sans-serif;
   padding: 13px 20px;
   height: 50px;
 }
@@ -855,7 +859,8 @@ h3.propertytxt {
   line-height: 25px;
   text-transform: uppercase;
   font-weight: 700;
-  font-family: "Lato",ui-sans-serif;
+  /* font-family: "Lato",ui-sans-serif; */
+  font-family: "Gotham Medium", sans-serif;
 }
 .cursor {cursor: pointer;}
 /*TeamInside css start*/
@@ -910,7 +915,7 @@ h3.propertytxt {
 .bg-img.reviews_pg_wrap, .bg-img.new_dev_pg_wrap {min-height: unset;}
 .sliderHeader{font-size: 55px;line-height: 55px;text-transform: uppercase;color: #222222;font-weight: 300;font-family: "Gotham",sans-serif;text-align: center;margin: 55px 0px;}
 .slider-wrapper .slick-slider {max-width: 770px;margin:0 auto 90px;padding-bottom: 30px;}
-.slider-wrapper .slider-content p{font-size: 22px;letter-spacing: 1px;line-height: 32px;color: #222222;font-weight: 400;font-family: "Lato",ui-sans-serif;text-align: center;}
+.slider-wrapper .slider-content p{font-size: 22px;letter-spacing: 1px;line-height: 32px;color: #222222;font-weight: 400;font-family: "Lato",ui-sans-serif;text-align: justify;}
 .slider-wrapper .slick-next:before, .slider-wrapper .slick-prev:before{display: none;}
 .slider-wrapper .slick-next, .slider-wrapper .slick-prev{top: 45%;background-size: contain;}
 .slider-wrapper .slick-prev {left: -100px;background: url(../images/left-arrow.png) no-repeat center center / cover !important;width: 20px;height: 40px;}
@@ -958,7 +963,7 @@ h3.propertytxt {
 .video-name {font-size: 28px;letter-spacing: 1px;line-height: 40px;text-transform: uppercase;color: #222222;font-weight: 700;font-family: "Lato",ui-sans-serif;}
 .video-content {font-size: 22px;letter-spacing: 1px;line-height: 32px;color: #222222;font-weight: 400;font-family: "Lato",ui-sans-serif;margin: 0px;}
 .video-btn a{text-decoration: none;background: #f8de7f;color: #fff;padding: 7px 60px;margin: 40px 0px 80px;display: block;font-size: 20px;}
-.new_dev_pg_wrap .video-btn.contact-btn a, .inside-wrap .video-btn.contact-btn a, .sell-search-box .contact-btn a {text-decoration: none;background: #f8de7f;padding: 10px 10px;margin: 30px 0px;display: block;border: 1px solid #f8de7f;font-size: 20px;letter-spacing: 1px;line-height: 30px;text-transform: uppercase;color: #ffffff;font-weight: 400;font-family: "Lato",ui-sans-serif;text-align: center;}
+.new_dev_pg_wrap .video-btn.contact-btn a, .inside-wrap .video-btn.contact-btn a, .sell-search-box .contact-btn a {text-decoration: none;background: #f8de7f;padding: 10px 10px;margin: 30px 0px;display: block;border: 1px solid #f8de7f;font-size: 20px;letter-spacing: 1px;line-height: 30px;text-transform: uppercase;color: #000;font-weight: 400;font-family: "Lato",ui-sans-serif;text-align: center;}
 .new_dev_pg_wrap .video-btn.contact-btn a:hover, .video-btn a:hover, .inside-wrap .video-btn.contact-btn a:hover{background-color: white;color: black;border: 1px solid #f8de7f;}
 .new_dev_pg_wrap .find-hotel a {margin-bottom: 60px;}
 .videos_pg_wrap .buttons-wrap.video-wrapper .sold-btn a {margin-top: -10px;line-height: 35px;}

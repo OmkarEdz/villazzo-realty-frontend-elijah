@@ -159,14 +159,16 @@ const Teams = ({
               {teamspage.attributes.Member.map((element, index) => (
               <div key={index} className="meet-left main-team">
                 <p className="meet-left-img">
-                  <Image
-                    loader={myLoader}
-                    src= {`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${element.memberImageURL}`}
-                    key={`element${index}`}
-                    className="header_image"
-                    layout="fill"
-                    alt="Villazzo"
-                  />
+                  <a href={element.pagelink}>
+                    <Image
+                      loader={myLoader}
+                      src= {`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${element.memberImageURL}`}
+                      key={`element${index}`}
+                      className="header_image"
+                      layout="fill"
+                      alt="Villazzo"
+                    />
+                  </a>
                 </p>
                 <h3 className="meet-left-name">
                   <a href={element.pagelink} className="meet-left-name-link">{element.memberName}</a>
