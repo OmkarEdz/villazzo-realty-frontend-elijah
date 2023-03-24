@@ -463,7 +463,7 @@ color: #fff;
 }
 .footer-links {
   display: flex;
-  width: 55%;
+  width: 56%;
 }
 .toll-wrap {
   margin: 0px;
@@ -502,7 +502,7 @@ color: #fff;
 }
 .footer-icons {
   display: flex;
-  margin-top: 65px;
+  margin-top: 75px;
   align-items: center;
 }
 .footer-icons p {
@@ -518,8 +518,8 @@ color: #fff;
   font-size: 18px;
 }
 .navigate-sec1 a:hover {
-  text-decoration: underline;
-  color: #f47421;
+  text-decoration: underline !important;
+  color: #f47421 !important;
 }
 .footer-sec1 {
   width: 40%;
@@ -568,7 +568,7 @@ color: #fff;
   justify-content: space-between;
 }
 .footer-images-wrap {
-  width: 45%;
+  width: 44%;
 }
 .footer-img {
   width: 47%;
@@ -755,15 +755,14 @@ h3.propertytxt {
   width: 100%;
   padding: 10px;
   font-size: 18px;
-  font-weight: 700;
   text-transform: uppercase;
-  color: #000;
-  font-weight: 700;
-  /* font-family: "Lato",ui-sans-serif; */
+  color:#212529;
+  font-weight: 500;
   font-family: "Gotham", sans-serif;
 }
 .search-icon-box input:hover {
-  color: #222;
+  color: #212529;
+  background: #fff;
 }
 .buy-search-box {
   width:100%;
@@ -792,7 +791,7 @@ h3.propertytxt {
   color: #b5babc;
   font-weight: 700;
   /* font-family: "Lato",ui-sans-serif; */
-  font-family: "Gotham Medium", sans-serif;
+  font-family: "Gotham", sans-serif;
   padding: 13px 20px;
   height: 50px;
 }
@@ -860,13 +859,13 @@ h3.propertytxt {
   text-transform: uppercase;
   font-weight: 700;
   /* font-family: "Lato",ui-sans-serif; */
-  font-family: "Gotham Medium", sans-serif;
+  font-family: "Gotham", sans-serif;
 }
 .cursor {cursor: pointer;}
 /*TeamInside css start*/
 .meet-wrap{display: flex;justify-content: flex-start;flex-wrap: wrap;margin: 15px 0px 60px;width: 100%;}
-.meet-wrap:before {content: '';width: 30%;order:0;}
-.meet-wrap:after {content: '';width: 30%;order:2;}
+.meet-wrap:before {content: '';width: 31.4%;margin: 30px 10px;order:0;}
+.meet-wrap:after {content: '';width: 31.4%;margin: 30px 10px;order:2;}
 .team-heading{text-align: center;font-size: 55px;line-height: 55px;text-transform: uppercase;color: #222222;font-weight: 300;border-bottom: 3px solid #f7dd80;font-family: "Gotham",sans-serif;width: 100%;margin-top: 55px;padding-bottom: 25px;}
 .team-heading.team{margin-bottom: 0px;border-bottom: unset;padding-bottom: 0px;margin-bottom: 15px;}
 .meet-left{width: 34%;text-align: center;order: 3;margin: 30px 0px;}
