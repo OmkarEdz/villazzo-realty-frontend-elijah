@@ -201,7 +201,7 @@ const Header = ({ navigation, global }) => {
             <div className="logo-wrap">
               <div className="villazzo-logo-wrap">
                 <div className="main-logo">
-                  <Link href="/"><Image
+                  <Link href="/" passHref><Image
                     loader={myLoader}
                     src={getStrapiMedia(global.attributes.companyLogo)}
                     alt="Image"
@@ -220,6 +220,9 @@ const Header = ({ navigation, global }) => {
                       <p><a href="https://www.villazzo.com/">VILLAZZO HOTELS</a></p>
                       <p><a href="http://www.global-luxury-villas.com/">GREAT VILLA DEALS</a></p>
                     </div>
+                  </div>
+                  <div className="visit-text-wrap">
+                    <p>FAVORITES <i className="fa fa-star"></i></p>
                   </div>
                 </div>
               </div>

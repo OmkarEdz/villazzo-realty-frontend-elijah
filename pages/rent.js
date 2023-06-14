@@ -12,7 +12,7 @@ const Rent = ({ global, homepage, footerData, navigation }) => {
     return `${src}?w=${width}&q=${quality || 75}`
   }
   const router = useRouter()
-  let defaultState = { values: [1000000] }
+  let defaultState = { values: [0] }
   let [state, setState] = useState(defaultState)
   const [location, setLocation] = useState("")
   const [propertyType, setPropertyType] = useState("8")
@@ -46,7 +46,7 @@ const Rent = ({ global, homepage, footerData, navigation }) => {
               <p>Villazzo is here to help acquire your dream home or condo. We have helped many clients successfully secure their new residence in South Florida. Let us do the same for you.</p>
             </div>
             <div className="buy-search-box">
-              <form id="Form-1">
+              <form id="Form-1" onSubmit={()=> MBBv3_SubmitCustomSearchForm('Form-1','https://www.villazzorealty.com/results')}>
                 <input type="hidden" name="mls_id" value="fl133" />
                 <div className="row">
                   <div className="col-md-4">
@@ -78,10 +78,10 @@ const Rent = ({ global, homepage, footerData, navigation }) => {
                   <div className="col-md-3">
                     <label className="">PRICE RANGE</label>
                     <Range
-                      step={20}
-                      initial={1000000}
-                      min={1000000}
-                      max={20000000}
+                      step={100}
+                      initial={0}
+                      min={0}
+                      max={1000000}
                       values={state.values}
                       onChange={(values) => setState({ values })}
                       renderTrack={({ props, children }) => (

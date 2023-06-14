@@ -147,12 +147,12 @@ const Footer = ({ footerProp }) => {
                   </b>
                   <div className="navigate">
                     <div className="navigate-links">
-                      {footerProp.attributes.navigateLinksLeft.map((value, index) => (
+                      {footerProp.attributes.navigateLinksLeft?.map((value, index) => (
                         <div className="navigate-sec1" key={`left${index}`}>
                           <a href={value.URL} key={`left-links${index}`}>{value.Label}</a>
                         </div>
                       ))}
-                      <div className="navigate-sec1"><a onClick={onAddClick}>CONTACT</a></div>
+                      {/* <div className="navigate-sec1"><a onClick={onAddClick}>CONTACT</a></div> */}
                     </div>
                     <div className="navigate-links">
                       {footerProp.attributes.navigateLinksRight.map((value, index) => (

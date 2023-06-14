@@ -47,7 +47,11 @@ const Reviews = ({
               <Slider {...settings}>
                   {mainReviewsList.map((element, index) => (
                     <div key={index} className="slider-content">
-                        <p>{element.Content}</p>
+                        <p className="slider_content_para">{element.Content}</p>
+                        <div className="slider_cont_bottom">
+                          <p className="reviewer_name">{element.Reviewer}</p>
+                          <p className="reviewer_address">{element.Location}</p>
+                        </div>
                     </div>
                   ))}
               </Slider>

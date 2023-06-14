@@ -173,7 +173,7 @@ const Home = ({
             alt="Villazzo"
           /> */}
           <div className="blankDiv"></div>
-          <video loop muted autoPlay={"autoplay"} playsinline>
+          <video loop muted autoPlay={"autoplay"}>
               <source src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${global.attributes.videoURL}`} type="video/mp4" />
               <source src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${global.attributes.videoURL}`} type="video/webm" />
           </video>
@@ -238,10 +238,29 @@ const Home = ({
                         <i className="fa-solid fa-caret-down"></i>
                       </a>
                     </p>
-                    <div className="dropdownMenu">
-                      <p><a href="https://www.villazzo.com/">VILLAZZO HOTELS</a></p>
-                      <p><a href="http://www.global-luxury-villas.com/">GREAT VILLA DEALS</a></p>
+                    <div className="dropdownMenu dropdownMenuNew">
+                      {global.attributes.OurSites.map((element, index) => (
+                        <p key={index}>
+                          <a href={element.SiteLink}>
+                            <Image
+                              loader={myLoader}
+                              src= {`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${element.SiteImageURL1}`}
+                              alt="Image"
+                              layout="fill"
+                            />
+                            <Image
+                              loader={myLoader}
+                              src= {`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${element.SiteImageURL2}`}
+                              alt="Image"
+                              layout="fill"
+                            />
+                          </a>
+                        </p>
+                      ))}
                     </div>
+                  </div>
+                  <div className="visit-text-wrap favLink">
+                    <p><a href="/favourites">FAVORITES <i className="fa fa-star"></i></a></p>
                   </div>
                 </div>
               </div>
@@ -260,9 +279,23 @@ const Home = ({
                       <i className="fa-solid fa-caret-down"></i>
                     </a>
                   </p>
-                  <div className="dropdownMenu">
-                    <p><a href="mailto:villazzorealty@villazzo.com">villazzorealty@villazzo.com</a></p>
-                    <p><a href="tel:+1 (305) 340-2727">+1 (305) 340-2727</a></p>
+                  <div className="dropdownMenu dropdownMenuSeeMore">
+                    <ul>
+                      <li>
+                        <a href="tel:+1(877)8455299"><span>TOLL FREE:</span><br/>1-877-VILLAZZO</a>
+                      </li>
+                      <li>
+                        <a href="tel:+1-305-777-0146"><span>MIAMI OFFICE:</span><br/>+1 (305) 777-0146</a>
+                      </li>
+                      <li>
+                        <a href="tel:+33(4)94493254"><span>SAINT-TROPEZ OFFICE:</span><br/>+33 (4) 94 49 32 54</a>
+                      </li>
+                      <li>
+                        <div className="inqury-btn">
+                          <a onClick={onAddClick}>CONTACT US</a>
+                        </div>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
