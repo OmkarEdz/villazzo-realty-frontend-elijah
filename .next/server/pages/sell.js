@@ -111,7 +111,7 @@ const Sell = ({ global , homepage , footerData , navigation ,  })=>{
         event.preventDefault();
         let isValidForm = handleValidation();
         if (isValidForm) {
-            axios__WEBPACK_IMPORTED_MODULE_8__["default"].post(`${"https://admin.villazzorealty.com"}/api/contactforms`, {
+            axios__WEBPACK_IMPORTED_MODULE_8__["default"].post(`${"https://villazzo-realty-backend-production.up.railway.app"}/api/contactforms`, {
                 "data": {
                     firstName: fullname,
                     lastName: lastName,
@@ -171,11 +171,11 @@ const Sell = ({ global , homepage , footerData , navigation ,  })=>{
                                 playsinline: true,
                                 children: [
                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("source", {
-                                        src: `${"https://admin.villazzorealty.com"}${global.attributes.videoURL}`,
+                                        src: `${"https://villazzo-realty-backend-production.up.railway.app"}${global.attributes.videoURL}`,
                                         type: "video/mp4"
                                     }),
                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("source", {
-                                        src: `${"https://admin.villazzorealty.com"}${global.attributes.videoURL}`,
+                                        src: `${"https://villazzo-realty-backend-production.up.railway.app"}${global.attributes.videoURL}`,
                                         type: "video/webm"
                                     })
                                 ]

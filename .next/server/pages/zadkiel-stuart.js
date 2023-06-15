@@ -112,7 +112,7 @@ const TeamsInside = ({ global , zadkielstuart , footerData , navigation ,  })=>{
         event.preventDefault();
         let isValidForm = handleValidation();
         if (isValidForm) {
-            axios__WEBPACK_IMPORTED_MODULE_8__["default"].post(`${"https://admin.villazzorealty.com"}/api/contactforms`, {
+            axios__WEBPACK_IMPORTED_MODULE_8__["default"].post(`${"https://villazzo-realty-backend-production.up.railway.app"}/api/contactforms`, {
                 "data": {
                     firstName: fullname,
                     lastName: lastName,
@@ -182,7 +182,7 @@ const TeamsInside = ({ global , zadkielstuart , footerData , navigation ,  })=>{
                                                     className: "meet-left-img",
                                                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_5___default()), {
                                                         loader: myLoader,
-                                                        src: `${"https://admin.villazzorealty.com"}${zadkielstuart.attributes.memberImageURL}`,
+                                                        src: `${"https://villazzo-realty-backend-production.up.railway.app"}${zadkielstuart.attributes.memberImageURL}`,
                                                         className: "header_image",
                                                         layout: "fill",
                                                         alt: "Villazzo"
@@ -232,7 +232,7 @@ const TeamsInside = ({ global , zadkielstuart , footerData , navigation ,  })=>{
                                                             className: "img_Wrap",
                                                             children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_5___default()), {
                                                                 loader: myLoader,
-                                                                src: `${"https://admin.villazzorealty.com"}${element.propertyImageURL}`,
+                                                                src: `${"https://villazzo-realty-backend-production.up.railway.app"}${element.propertyImageURL}`,
                                                                 className: "header_image",
                                                                 layout: "fill",
                                                                 alt: "Villazzo"

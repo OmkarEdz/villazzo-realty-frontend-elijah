@@ -95,11 +95,11 @@ const SearchNew = ({ global , homepage , footerData , navigation  })=>{
                                 autoPlay: "autoplay",
                                 children: [
                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("source", {
-                                        src: `${"https://admin.villazzorealty.com"}${global.attributes.videoURL}`,
+                                        src: `${"https://villazzo-realty-backend-production.up.railway.app"}${global.attributes.videoURL}`,
                                         type: "video/mp4"
                                     }),
                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("source", {
-                                        src: `${"https://admin.villazzorealty.com"}${global.attributes.videoURL}`,
+                                        src: `${"https://villazzo-realty-backend-production.up.railway.app"}${global.attributes.videoURL}`,
                                         type: "video/webm"
                                     })
                                 ]

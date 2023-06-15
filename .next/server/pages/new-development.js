@@ -116,7 +116,7 @@ const NewDevelopment = ({ global , newdevelopmentpage , footerData , navigation 
         event.preventDefault();
         let isValidForm = handleValidation();
         if (isValidForm) {
-            axios__WEBPACK_IMPORTED_MODULE_8__["default"].post(`${"https://admin.villazzorealty.com"}/api/contactforms`, {
+            axios__WEBPACK_IMPORTED_MODULE_8__["default"].post(`${"https://villazzo-realty-backend-production.up.railway.app"}/api/contactforms`, {
                 "data": {
                     firstName: fullname,
                     lastName: lastName,
@@ -187,7 +187,7 @@ const NewDevelopment = ({ global , newdevelopmentpage , footerData , navigation 
                                                         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_2___default()), {
                                                             loader: myLoader,
                                                             // src={process.env.NEXT_PUBLIC_STRAPI_API_URL}
-                                                            src: `${"https://admin.villazzorealty.com"}${element.propertyImageURL}`,
+                                                            src: `${"https://villazzo-realty-backend-production.up.railway.app"}${element.propertyImageURL}`,
                                                             className: "img",
                                                             layout: "fill",
                                                             alt: "Villazzo"

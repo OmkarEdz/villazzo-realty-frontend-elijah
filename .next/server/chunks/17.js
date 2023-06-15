@@ -18,7 +18,7 @@ exports.modules = {
  * @param {string} path Path of the URL
  * @returns {string} Full Strapi URL
  */ function getStrapiURL(path = "") {
-    return `${"https://admin.villazzorealty.com" || 0}${path}`;
+    return `${"https://villazzo-realty-backend-production.up.railway.app" || 0}${path}`;
 }
 /**
  * Helper to make GET requests to Strapi API endpoints

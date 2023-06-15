@@ -6,11 +6,8 @@ exports.ids = [811];
 exports.modules = {
 
 /***/ 8744:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(997);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _lib_media__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6017);
@@ -24,18 +21,18 @@ const Image = ({ image , style  })=>{
     // const loader = () => {
     //   return getStrapiMedia(image)
     // }
-    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_2___default()), {
+    return /*#__PURE__*/ _jsx(NextImage, {
         // loader={loader}
         layout: "fill",
         width: width || "100%",
         height: height || "100%",
         objectFit: "contain",
-        src: (0,_lib_media__WEBPACK_IMPORTED_MODULE_1__/* .getStrapiMedia */ .$)(image),
+        src: getStrapiMedia(image),
         alt: alternativeText || "",
         className: cssStyle || ""
     });
 };
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Image);
+/* unused harmony default export */ var __WEBPACK_DEFAULT_EXPORT__ = ((/* unused pure expression or super */ null && (Image)));
 
 
 /***/ }),
@@ -215,7 +212,7 @@ const PropertyDetails = ({ global , meettheteam , footerData , navigation ,  })=
         event.preventDefault();
         let isValidForm = handleValidation();
         if (isValidForm) {
-            axios__WEBPACK_IMPORTED_MODULE_8__["default"].post(`${"https://admin.villazzorealty.com"}/api/contactforms`, {
+            axios__WEBPACK_IMPORTED_MODULE_8__["default"].post(`${"https://villazzo-realty-backend-production.up.railway.app"}/api/contactforms`, {
                 "data": {
                     firstName: fullname,
                     lastName: lastName,
@@ -354,7 +351,7 @@ const PropertyDetails = ({ global , meettheteam , footerData , navigation ,  })=
                                                                 children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_5___default()), {
                                                                     loader: myLoader,
                                                                     // src={element.propertyImageURL}
-                                                                    src: `${"https://admin.villazzorealty.com"}${element.propertyImageURL}`,
+                                                                    src: `${"https://villazzo-realty-backend-production.up.railway.app"}${element.propertyImageURL}`,
                                                                     className: "header_image",
                                                                     layout: "fill",
                                                                     alt: "Villazzo"
