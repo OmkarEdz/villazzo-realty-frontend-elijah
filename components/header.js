@@ -216,13 +216,23 @@ const Header = ({ navigation, global }) => {
                         <i className="fa-solid fa-caret-down"></i>
                       </a>
                     </p>
-                    <div className="dropdownMenu">
-                      <p><a href="https://www.villazzo.com/">VILLAZZO HOTELS</a></p>
-                      <p><a href="http://www.global-luxury-villas.com/">GREAT VILLA DEALS</a></p>
+                    <div className="dropdownMenu dropdownMenuNew">
+                      {global.attributes.OurSites.map((element, index) => (
+                        <p key={index}>
+                          <a href={element.SiteLink}>
+                            <Image
+                              loader={myLoader}
+                              src= {`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${element.SiteImageURL1}`}
+                              alt="Image"
+                              layout="fill"
+                            />
+                          </a>
+                        </p>
+                      ))}
                     </div>
                   </div>
-                  <div className="visit-text-wrap">
-                    <p>FAVORITES <i className="fa fa-star"></i></p>
+                  <div className="visit-text-wrap favLink">
+                    <p><a href="/favourites">FAVORITES <i className="fa fa-star"></i></a></p>
                   </div>
                 </div>
               </div>
@@ -234,16 +244,30 @@ const Header = ({ navigation, global }) => {
                 <a href="tel:+1(305)777 0146" className="mobile-inquiry-call"><i className="fa fa-phone" aria-hidden="true"></i></a>
               </div>
               <div className="see-more-text">
-                <div className="see-more-text-wrap">
+              <div className="see-more-text-wrap">
                   <p>SEE MORE OPTIONS</p>
                   <p className="drop-down">
                     <a href="#">
                       <i className="fa-solid fa-caret-down"></i>
                     </a>
                   </p>
-                  <div className="dropdownMenu">
-                    <p><a href="mailto:villazzorealty@villazzo.com">villazzorealty@villazzo.com</a></p>
-                    <p><a href="tel:+1 (305) 340-2727">+1 (305) 340-2727</a></p>
+                  <div className="dropdownMenu dropdownMenuSeeMore">
+                    <ul>
+                      <li>
+                        <a href="tel:+1(877)8455299"><span>TOLL FREE:</span><br/>1-877-VILLAZZO</a>
+                      </li>
+                      <li>
+                        <a href="tel:+1-305-777-0146"><span>MIAMI OFFICE:</span><br/>+1 (305) 777-0146</a>
+                      </li>
+                      <li>
+                        <a href="tel:+33(4)94493254"><span>SAINT-TROPEZ OFFICE:</span><br/>+33 (4) 94 49 32 54</a>
+                      </li>
+                      <li>
+                        <div className="inqury-btn">
+                          <a onClick={onAddClick}>CONTACT US</a>
+                        </div>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>

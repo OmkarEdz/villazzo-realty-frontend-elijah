@@ -223,12 +223,12 @@ const Home = ({
             <div className="logo-wrap">
               <div className="villazzo-logo-wrap">
                 <div className="main-logo">
-                  <Image
+                  <Link href="/" passHref><Image
                     loader={myLoader}
-                    src={getStrapiMedia(global.attributes.companyLogo)}
+                    src= {`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${global.attributes.companyLogoURL}`}
                     alt="Image"
                     layout="fill"
-                  />
+                  /></Link>
                 </div>
                 <div className="visit-text">
                   <div className="visit-text-wrap">
@@ -245,12 +245,6 @@ const Home = ({
                             <Image
                               loader={myLoader}
                               src= {`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${element.SiteImageURL1}`}
-                              alt="Image"
-                              layout="fill"
-                            />
-                            <Image
-                              loader={myLoader}
-                              src= {`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${element.SiteImageURL2}`}
                               alt="Image"
                               layout="fill"
                             />

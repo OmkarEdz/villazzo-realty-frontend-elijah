@@ -248,7 +248,7 @@ img {
   letter-spacing: 0.4px;
   width: max-content;
 }
-.bg-white .see-more-text p, .bg-white .visit-text-wrap > p:first-child, .bg-white .inquiry a, .bg-white .drop-down a {
+.bg-white .see-more-text p, .bg-white .visit-text-wrap > p:first-child, .bg-white .inquiry a, .bg-white .drop-down a, .bg-white .visit-text-wrap.favLink > p > a {
   color:#000;
 }
 .see-more-text p.drop-down, .visit-text p.drop-down {
@@ -436,7 +436,7 @@ img {
   text-align: center;
 }*/
 .visit-text-wrap p, .see-more-text-wrap p {cursor: pointer;}
-.visit-text-wrap:hover p, .visit-text-wrap:hover .drop-down a {color: #f8de7f;}
+.visit-text-wrap:hover p, .visit-text-wrap:hover .drop-down a {color: #f8de7f !important;}
 .see-more-text-wrap:hover > p, .see-more-text-wrap:hover > .drop-down a {color: #f8de7f;}
 .sell-btn a {
 color:#212529;
@@ -1034,7 +1034,7 @@ h3.propertytxt {
 .dropdownMenu p a:hover {color: #dac172;}
 .dropdownMenu p a > span {position: unset !important;}
 .dropdownMenu p a > span img {width: 230px !important;}
-.dropdownMenu p a > span:first-child img {width: 230px !important;height: 180px !important;object-fit: cover;}
+.dropdownMenu p a > span:first-child img {width: 221px !important;height: 221px !important;object-fit: cover;}
 .dropdownMenu.dropdownMenuNew p a:hover {filter: brightness(0.8);}
 .dropdownMenu.dropdownMenuSeeMore {border-radius: 0px;padding: 0px 10px;left: -50px;}
 .dropdownMenu.dropdownMenuSeeMore ul {padding: 0px 20px;margin:-5px 0px;text-align: center;list-style: none;}
