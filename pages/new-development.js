@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react"
 import Image from "next/image"
-import { getStrapiMedia } from "../lib/media"
 import Footer from "../components/footer"
 import Header from "../components/header"
 import { fetchAPI } from "../lib/api"

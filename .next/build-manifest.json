@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/Vrl33ljt1TJh-renSOWnT/_buildManifest.js",
-    "static/Vrl33ljt1TJh-renSOWnT/_ssgManifest.js"
+    "static/BRfXoxpJ2n6oDavVXq97X/_buildManifest.js",
+    "static/BRfXoxpJ2n6oDavVXq97X/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
@@ -48,7 +48,7 @@
       "static/chunks/706-7ddb6e22528ea7d8.js",
       "static/chunks/151-38e8a381b2dd4892.js",
       "static/chunks/683-b22065b95d4edada.js",
-      "static/chunks/pages/christian-jagodzinski-f0fe61268ca136ce.js"
+      "static/chunks/pages/christian-jagodzinski-9918023a07f3791a.js"
     ],
     "/coming-soon": [
       "static/chunks/webpack-5752944655d749a0.js",
@@ -66,7 +66,7 @@
       "static/chunks/706-7ddb6e22528ea7d8.js",
       "static/chunks/151-38e8a381b2dd4892.js",
       "static/chunks/683-b22065b95d4edada.js",
-      "static/chunks/pages/emily-gonzalez-4f5dc61f0cc63ac0.js"
+      "static/chunks/pages/emily-gonzalez-253d9e0c232ccbbc.js"
     ],
     "/gabriel-henriqez": [
       "static/chunks/webpack-5752944655d749a0.js",
@@ -75,7 +75,7 @@
       "static/chunks/706-7ddb6e22528ea7d8.js",
       "static/chunks/151-38e8a381b2dd4892.js",
       "static/chunks/683-b22065b95d4edada.js",
-      "static/chunks/pages/gabriel-henriqez-43ed30595aeb6834.js"
+      "static/chunks/pages/gabriel-henriqez-c424072e888cb209.js"
     ],
     "/lisa-blake": [
       "static/chunks/webpack-5752944655d749a0.js",
@@ -84,7 +84,7 @@
       "static/chunks/706-7ddb6e22528ea7d8.js",
       "static/chunks/151-38e8a381b2dd4892.js",
       "static/chunks/683-b22065b95d4edada.js",
-      "static/chunks/pages/lisa-blake-68dc975f91b20c8c.js"
+      "static/chunks/pages/lisa-blake-f1a94290aadb0cc3.js"
     ],
     "/new-development": [
       "static/chunks/webpack-5752944655d749a0.js",
@@ -93,7 +93,7 @@
       "static/chunks/706-7ddb6e22528ea7d8.js",
       "static/chunks/151-38e8a381b2dd4892.js",
       "static/chunks/683-b22065b95d4edada.js",
-      "static/chunks/pages/new-development-405b371982f41939.js"
+      "static/chunks/pages/new-development-844ce0b3ff804b2e.js"
     ],
     "/property-detail": [
       "static/chunks/webpack-5752944655d749a0.js",
@@ -102,7 +102,7 @@
       "static/chunks/706-7ddb6e22528ea7d8.js",
       "static/chunks/151-38e8a381b2dd4892.js",
       "static/chunks/683-b22065b95d4edada.js",
-      "static/chunks/pages/property-detail-d465112d321d128e.js"
+      "static/chunks/pages/property-detail-ebf2bec9c0b9bc67.js"
     ],
     "/rent": [
       "static/chunks/webpack-5752944655d749a0.js",
@@ -140,7 +140,7 @@
       "static/chunks/706-7ddb6e22528ea7d8.js",
       "static/chunks/151-38e8a381b2dd4892.js",
       "static/chunks/683-b22065b95d4edada.js",
-      "static/chunks/pages/samar-abul-314dde3491512b7a.js"
+      "static/chunks/pages/samar-abul-370313e4ec28763c.js"
     ],
     "/search-new": [
       "static/chunks/webpack-5752944655d749a0.js",
@@ -159,7 +159,7 @@
       "static/chunks/706-7ddb6e22528ea7d8.js",
       "static/chunks/151-38e8a381b2dd4892.js",
       "static/chunks/683-b22065b95d4edada.js",
-      "static/chunks/pages/sell-ce30bcd47c967e17.js"
+      "static/chunks/pages/sell-065dddf2ec48ed1d.js"
     ],
     "/sold": [
       "static/chunks/webpack-5752944655d749a0.js",

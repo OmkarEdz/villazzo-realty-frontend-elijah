@@ -113,14 +113,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _lib_api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(4626);
 /* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(5675);
 /* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_image__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _lib_media__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(6017);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(1664);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(9648);
-/* harmony import */ var _components_property_card__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(712);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_components_footer__WEBPACK_IMPORTED_MODULE_2__, _components_header__WEBPACK_IMPORTED_MODULE_3__, axios__WEBPACK_IMPORTED_MODULE_8__, _components_property_card__WEBPACK_IMPORTED_MODULE_9__]);
-([_components_footer__WEBPACK_IMPORTED_MODULE_2__, _components_header__WEBPACK_IMPORTED_MODULE_3__, axios__WEBPACK_IMPORTED_MODULE_8__, _components_property_card__WEBPACK_IMPORTED_MODULE_9__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
-
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(1664);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(9648);
+/* harmony import */ var _components_property_card__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(712);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_components_footer__WEBPACK_IMPORTED_MODULE_2__, _components_header__WEBPACK_IMPORTED_MODULE_3__, axios__WEBPACK_IMPORTED_MODULE_7__, _components_property_card__WEBPACK_IMPORTED_MODULE_8__]);
+([_components_footer__WEBPACK_IMPORTED_MODULE_2__, _components_header__WEBPACK_IMPORTED_MODULE_3__, axios__WEBPACK_IMPORTED_MODULE_7__, _components_property_card__WEBPACK_IMPORTED_MODULE_8__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
 
 
 
@@ -208,7 +206,7 @@ const PropertyDetails = ({ global , meettheteam , footerData , navigation ,  })=
         event.preventDefault();
         let isValidForm = handleValidation();
         if (isValidForm) {
-            axios__WEBPACK_IMPORTED_MODULE_8__["default"].post(`${"https://villazzo-realty-backend-production.up.railway.app"}/api/contactforms`, {
+            axios__WEBPACK_IMPORTED_MODULE_7__["default"].post(`${"https://villazzo-realty-backend-production.up.railway.app"}/api/contactforms`, {
                 "data": {
                     firstName: fullname,
                     lastName: lastName,
@@ -218,7 +216,7 @@ const PropertyDetails = ({ global , meettheteam , footerData , navigation ,  })=
                 }
             });
             const qs = __webpack_require__(7104);
-            axios__WEBPACK_IMPORTED_MODULE_8__["default"].post("https://webdevfolio.com/Villazzomail/Villazzomail.php", qs.stringify({
+            axios__WEBPACK_IMPORTED_MODULE_7__["default"].post("https://webdevfolio.com/Villazzomail/Villazzomail.php", qs.stringify({
                 "firstName": fullname,
                 "lastName": lastName,
                 "email": email,
@@ -262,7 +260,7 @@ const PropertyDetails = ({ global , meettheteam , footerData , navigation ,  })=
                     /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
                         className: "container",
                         children: [
-                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_property_card__WEBPACK_IMPORTED_MODULE_9__/* ["default"] */ .Z, {}),
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_property_card__WEBPACK_IMPORTED_MODULE_8__/* ["default"] */ .Z, {}),
                             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
                                 className: "buttons-wrap video-wrapper team-wrapper inside-wrap detail-pg-wrap",
                                 children: [

@@ -20,16 +20,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5675);
 /* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_image__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _lib_media__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(6017);
-/* harmony import */ var _components_footer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(6151);
-/* harmony import */ var _components_header__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(4683);
-/* harmony import */ var _lib_api__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(4626);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(1664);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(9648);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_components_footer__WEBPACK_IMPORTED_MODULE_4__, _components_header__WEBPACK_IMPORTED_MODULE_5__, axios__WEBPACK_IMPORTED_MODULE_8__]);
-([_components_footer__WEBPACK_IMPORTED_MODULE_4__, _components_header__WEBPACK_IMPORTED_MODULE_5__, axios__WEBPACK_IMPORTED_MODULE_8__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
-
+/* harmony import */ var _components_footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(6151);
+/* harmony import */ var _components_header__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(4683);
+/* harmony import */ var _lib_api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(4626);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(1664);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(9648);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_components_footer__WEBPACK_IMPORTED_MODULE_3__, _components_header__WEBPACK_IMPORTED_MODULE_4__, axios__WEBPACK_IMPORTED_MODULE_7__]);
+([_components_footer__WEBPACK_IMPORTED_MODULE_3__, _components_header__WEBPACK_IMPORTED_MODULE_4__, axios__WEBPACK_IMPORTED_MODULE_7__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
 
 
 
@@ -116,7 +114,7 @@ const NewDevelopment = ({ global , newdevelopmentpage , footerData , navigation 
         event.preventDefault();
         let isValidForm = handleValidation();
         if (isValidForm) {
-            axios__WEBPACK_IMPORTED_MODULE_8__["default"].post(`${"https://villazzo-realty-backend-production.up.railway.app"}/api/contactforms`, {
+            axios__WEBPACK_IMPORTED_MODULE_7__["default"].post(`${"https://villazzo-realty-backend-production.up.railway.app"}/api/contactforms`, {
                 "data": {
                     firstName: fullname,
                     lastName: lastName,
@@ -126,7 +124,7 @@ const NewDevelopment = ({ global , newdevelopmentpage , footerData , navigation 
                 }
             });
             const qs = __webpack_require__(7104);
-            axios__WEBPACK_IMPORTED_MODULE_8__["default"].post("https://webdevfolio.com/Villazzomail/Villazzomail.php", qs.stringify({
+            axios__WEBPACK_IMPORTED_MODULE_7__["default"].post("https://webdevfolio.com/Villazzomail/Villazzomail.php", qs.stringify({
                 "firstName": fullname,
                 "lastName": lastName,
                 "email": email,
@@ -163,7 +161,7 @@ const NewDevelopment = ({ global , newdevelopmentpage , footerData , navigation 
             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
                 className: "bg-img bg-white new_dev_pg_wrap",
                 children: [
-                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_header__WEBPACK_IMPORTED_MODULE_5__/* ["default"] */ .Z, {
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_header__WEBPACK_IMPORTED_MODULE_4__/* ["default"] */ .Z, {
                         navigation: navigation,
                         global: global
                     }),
@@ -392,7 +390,7 @@ const NewDevelopment = ({ global , newdevelopmentpage , footerData , navigation 
                     })
                 ]
             }),
-            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_footer__WEBPACK_IMPORTED_MODULE_4__/* ["default"] */ .Z, {
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_footer__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z, {
                 footerProp: footerData
             })
         ]
@@ -401,16 +399,16 @@ const NewDevelopment = ({ global , newdevelopmentpage , footerData , navigation 
 async function getStaticProps() {
     // Run API calls in parallel
     const [globalRes, newdevelopmentpageRes, footerRes, navigationRes, ] = await Promise.all([
-        (0,_lib_api__WEBPACK_IMPORTED_MODULE_6__/* .fetchAPI */ .I)("/global", {
+        (0,_lib_api__WEBPACK_IMPORTED_MODULE_5__/* .fetchAPI */ .I)("/global", {
             populate: "*"
         }),
-        (0,_lib_api__WEBPACK_IMPORTED_MODULE_6__/* .fetchAPI */ .I)("/newdevelopmentpage", {
+        (0,_lib_api__WEBPACK_IMPORTED_MODULE_5__/* .fetchAPI */ .I)("/newdevelopmentpage", {
             populate: "*"
         }),
-        (0,_lib_api__WEBPACK_IMPORTED_MODULE_6__/* .fetchAPI */ .I)("/footer", {
+        (0,_lib_api__WEBPACK_IMPORTED_MODULE_5__/* .fetchAPI */ .I)("/footer", {
             populate: "deep"
         }),
-        (0,_lib_api__WEBPACK_IMPORTED_MODULE_6__/* .fetchAPI */ .I)("/header-nav", {
+        (0,_lib_api__WEBPACK_IMPORTED_MODULE_5__/* .fetchAPI */ .I)("/header-nav", {
             populate: "*"
         }), 
     ]);
