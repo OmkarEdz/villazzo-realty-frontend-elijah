@@ -1,6 +1,26 @@
 {
-  "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js"
+  "/coming-soon": "pages/coming-soon.js",
+  "/emily-gonzalez": "pages/emily-gonzalez.js",
+  "/_app": "pages/_app.js",
+  "/": "pages/index.js",
+  "/lisa-blake": "pages/lisa-blake.js",
+  "/new-development": "pages/new-development.js",
+  "/property-detail": "pages/property-detail.js",
+  "/rent": "pages/rent.js",
+  "/christian-jagodzinski": "pages/christian-jagodzinski.js",
+  "/results": "pages/results.js",
+  "/gabriel-henriqez": "pages/gabriel-henriqez.js",
+  "/reviews": "pages/reviews.js",
+  "/search-new": "pages/search-new.js",
+  "/sell": "pages/sell.js",
+  "/sold": "pages/sold.js",
+  "/buy": "pages/buy.js",
+  "/team-inside": "pages/team-inside.js",
+  "/team": "pages/team.js",
+  "/top-10-deals": "pages/top-10-deals.js",
+  "/videos": "pages/videos.js",
+  "/zadkiel-stuart": "pages/zadkiel-stuart.js",
+  "/samar-abul": "pages/samar-abul.js"
 }

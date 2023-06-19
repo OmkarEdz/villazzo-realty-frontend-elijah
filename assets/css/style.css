@@ -1636,9 +1636,6 @@ h3.propertytxt {
   .bg-img {
     min-height: 600px;
   }
-  .buttons-wrap {
-    /* margin-top: 45%; */
-  }
   .footer-sec1 .left-section {
     display: flex;
     flex-wrap: wrap;
