@@ -74,7 +74,7 @@ const Rent = ({ global, homepage, footerData, navigation }) => {
                       <option value="7">Residential Income</option>
                       <option value="10">Vacation/Time-Share</option>
                     </select>
-                  </div>
+                  </div> 
                   <div className="col-md-3">
                     <label className="">PRICE RANGE</label>
                     <Range

@@ -203,7 +203,7 @@ const Header = ({ navigation, global }) => {
                 <div className="main-logo">
                   <Link href="/" passHref><Image
                     loader={myLoader}
-                    src={getStrapiMedia(global.attributes.companyLogo)}
+                    src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${global.attributes.companyLogoURL}`}
                     alt="Image"
                     layout="fill"
                   /></Link>

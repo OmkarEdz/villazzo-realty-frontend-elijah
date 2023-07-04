@@ -4,7 +4,7 @@
 const nextConfig = {
   images: {
     loader: "default",
-    domains: ["localhost", "villazzo-backend.herokuapp.com"],
+    domains: ["localhost", "villazzo-realty-backend-production.up.railway.app"],
   },
 }
 
