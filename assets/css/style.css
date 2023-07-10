@@ -295,7 +295,7 @@ img {
 }
 .inquiry a.desktop-inquiry-call {
       font-size: 29px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     display: inline-block;
     letter-spacing: 0.4px;
 }
@@ -1211,12 +1211,13 @@ h3.propertytxt {
     padding-left: 0px
   }
 
-  .villazzo-logo-wrap {width: 150px;}
+  .villazzo-logo-wrap {width: auto;}
+  .main-logo img {height: auto !important;min-width: 120px !important;} 
   .navbar-expand-lg .navbar-nav {width: 700px;}
   .nav-item {margin: 0;}
   .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav .show>.nav-link {font-size: 14px;line-height: 14px;}
   .sell-btn a {padding: 10px 0;width: 140px;font-size: 14px;line-height: 14px;}
-  .see-more-text p, .visit-text-wrap >p:first-child {font-size: 10px;}
+  /* .see-more-text p, .visit-text-wrap >p:first-child {font-size: 10px;} */
   .inqury-btn a {padding: 10px 40px;line-height: 14px;font-size: 14px;}
   .see-more-text p.drop-down, .visit-text p.drop-down {font-size: 12px;}
   .toll-wrap {width: 90%;}
@@ -1234,6 +1235,8 @@ h3.propertytxt {
   .search-input {font-size: 16px;padding: 10px 15px 10px 35px;}
   .inquiry a.desktop-inquiry-call {font-size: 18px;}
   .sell-search-container.buy {width: 75%;}
+  .see-more-text {margin-top: 10px;}
+  .inquiry-wrap {margin-bottom: -12px;}
 
   .new_dev_pg_wrap .buttons-wrap.video-wrapper.team-wrapper.dev-wrapper, .buttons-wrap.video-wrapper.team-wrapper.inside-wrap {width: 80%;}
   .sold-heading, .video-heading {font-size: 32px;line-height: 32px;margin-top: 40px;}
@@ -1326,6 +1329,7 @@ h3.propertytxt {
 }
 
 @media only screen and (max-width: 991px) {
+  .inquiry-wrap {margin-bottom: 0;}
   .navbar-expand-lg .navbar-nav {
     margin: auto;
     background-color: #f8de7f;
@@ -1411,6 +1415,7 @@ h3.propertytxt {
   }
   .visit-text {
     margin: 5px auto 0;
+    display: none;
   }
   .hideOnDesk {
     display: block;
@@ -1585,7 +1590,7 @@ h3.propertytxt {
   }
   .mobile-inquiry-call i {
     color: #f8de7f;
-    font-size: 30px;
+    font-size: 24px;
   }
   .desktop-inquiry-call, .see-more-text {
     display:none;
@@ -1782,6 +1787,7 @@ h3.propertytxt {
   .sell-search-box .contact-btn a {padding:10px;}
   .footer-sec1 .toll-wrap p:nth-last-child(2) br ~ br {display:none;}
   .buttons-wrap {position:relative;z-index:99;}
+  .main-logo img {min-width: 150px !important;}
 }
 
 @media only screen and (max-width: 430px) {
@@ -1811,6 +1817,7 @@ h3.propertytxt {
   .footer-sec1 .toll-wrap p {font-size: 10px;margin-bottom: 15px;}
   .footer-sec1 .toll-wrap p strong {margin-bottom: 5px;}
   .footer-sec1 .toll-wrap p a {font-size: 10px;}
+  
 }
 
 @media not all and (min-resolution:.001dpcm)
