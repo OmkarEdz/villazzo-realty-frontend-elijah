@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import Footer from "../components/footer"
 import { fetchAPI } from "../lib/api"
 import Image from "next/image"
@@ -14,6 +14,15 @@ const Home = ({
   categories,
   navigation,
 }) => {
+  useEffect(() => {
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 150) {
+        document.getElementById('header').classList.add('sticky')
+      } else {
+        document.getElementById('header').classList.remove('sticky')
+      }
+    });
+  }, [])
   const myLoader = ({ src, width, quality }) => {
     return `${src}?w=${width}&q=${quality || 75}`
   }
@@ -178,7 +187,7 @@ const Home = ({
               <source src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${global.attributes.videoURL}`} type="video/webm" />
           </video>
         </div>
-        <header className="header">
+        <header className="header" id="header">
           <div className="main-wrap container">
             <div className="mobile-nav">
               <nav className="navbar navbar-expand-lg navbar-light hideOnDesk">

@@ -225,6 +225,7 @@ img {
 .main-logo img {
   width: auto !important;
   height: 70px !important;
+  transition: 0.5s all;
 }
 .see-more-text, .visit-text {
   display: flex;
@@ -305,40 +306,41 @@ img {
 .navbar-expand-lg .navbar-nav {
   margin: auto;
   padding: 2px 0px;
-      justify-content: space-between;
+      justify-content: center;
     align-items: center;
     width: 1280px;
 }
 .nav-item {
   text-transform: uppercase;
   position: relative;
-      margin: 0 20px;
-          width: 280px;
+      margin: 0;
+          flex:1;
 }
 .navbar-light .navbar-nav .nav-link, 
 .navbar-light .navbar-nav .show>.nav-link {
     color: #000;
     font-family: Gotham,sans-serif;
     text-align: center!important;
-    padding: 12px 10px!important;
+    padding: 9px 2rem!important;
     position: relative;
     font-weight: 500;
-    font-size: 22px;
-    line-height: 23px;
+    font-size: 15px;
+    line-height: 23.01px;
 }
 .nav-item:last-child a.nav-link{text-align: right;}
 .navbar-light .navbar-nav .nav-item:nth-child(2) .nav-link {
-  padding-right: 30px !important;
+  margin-right: 2rem;
 }
 .navbar-light .navbar-nav .nav-item:nth-child(2) .nav-link::after {
   content:"";
-  width:27px;
-  height:26px;
+  width:20px;
+  height:20px;
   position: absolute;
   margin-left:8px;top:10px;
   background: url('../images/villazzo-symbol.png') no-repeat;
-  right: 23%;
+  right: 20%;
   filter: brightness(0);
+  background-size: contain;
 }
 .navbar-light .navbar-nav .nav-link:hover, 
 .navbar-light .navbar-nav .show>.nav-link:hover{
@@ -377,7 +379,7 @@ img {
   margin: -1px -1000em 0px;
 }
 .dropdown-item {
-  padding:14px 10px;
+  padding:14px 1rem;
   font-size:17px;
   /* border-bottom: solid 1px #f0e6c7; */
   font-family: 'Gotham', sans-serif;
@@ -386,7 +388,7 @@ img {
   color: #222;
 }
 .dropdown-item:hover {
-  color:#dac172;
+  color:#f8de7f;
   font-family: 'Gotham', sans-serif;
   background: none !important;
 }
@@ -624,7 +626,7 @@ color:#212529;
   width: 100% !important;
 } */
 .footer-bottom {
-  padding:16px 0px;
+  padding:6px 0px;
   background-color: #fff;
 }
 .footer-page-links {
@@ -1071,6 +1073,11 @@ h3.propertytxt {
 .property-desc p {font-size: 18px;letter-spacing: 1px;line-height: 1.5;color: #222222;font-family: "Lato",ui-sans-serif;margin-bottom:0px;font-weight: 400;}
 .property-desc:last-child {margin-bottom: 0px;}
 
+.header.sticky {position: sticky;top: 0px;background: #fff;z-index: 999;}
+.header.sticky .main-logo img {height: 55px !important;}
+.header.sticky .see-more-text p, .header.sticky .drop-down a, .header.sticky .inquiry a.desktop-inquiry-call, .header.sticky .visit-text-wrap > p:first-child, .header.sticky .visit-text-wrap.favLink > p > a {color: #000;}
+.header.sticky .see-more-text {margin-top: 7px;}
+
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
@@ -1095,7 +1102,7 @@ h3.propertytxt {
   body .footer-images, body .footer-img span, body .footer-img .featured-img img {height: 100% !important;}
   body .footer-img .featured-img {height: 80%;}
   .navbar-expand-lg .navbar-nav li.nav-item:nth-child(2) {margin-right: 45px;}
-  .navbar-expand-lg .navbar-nav li.nav-item:nth-child(3) {margin-right: 100px;}
+  /* .navbar-expand-lg .navbar-nav li.nav-item:nth-child(3) {margin-right: 100px;} */
   .navbar-expand-lg .navbar-nav li.nav-item:last-child {width: max-content;}
   .footer-img {width: 49%;}
   .footer-images .footer-img:first-child {margin-right: 10px;}
@@ -1104,6 +1111,7 @@ h3.propertytxt {
 
 @media (min-width: 1580px){
   body .container {max-width: 1520px;}
+  .navbar-light .navbar-nav .nav-item:nth-child(2) .nav-link:after {width: 20px;background-size: contain;height: 20px;right:26%;}
 }
 
 @media (min-width: 1360px){
@@ -1126,8 +1134,7 @@ h3.propertytxt {
 @media only screen and (max-width: 1580px) {
   .navbar-expand-lg .navbar-nav {width: 1024px;}
   .nav-item {width: auto;}
-  .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav .show>.nav-link {font-size: 18px;line-height: 17px;}
-  .navbar-light .navbar-nav .nav-item:nth-child(2) .nav-link:after {width: 20px;background-size: contain;height: 20px;right: 0px;}
+  /* .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav .show>.nav-link {font-size: 18px;line-height: 17px;} */
   h3.propertytxt {font-size: 40px;line-height: 30px;}
   .sell-search-box {margin-top: 70px;}
   .selltxt {font-size: 20px;}
@@ -1164,7 +1171,7 @@ h3.propertytxt {
   .inquiry a.desktop-inquiry-call {font-size: 25px;margin-bottom: 0px;}
   .inqury-btn a {line-height: 20px;font-size: 16px;height: unset;}
   .buttons-wrap .sell-buy-rent-buttons {margin: 210px auto auto;}
-  .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav .show>.nav-link {font-size: 18px;}
+  /* .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav .show>.nav-link {font-size: 18px;} */
   .navbar-light .navbar-nav .nav-item:nth-child(2) .nav-link:after {top: 12px;}
   .toll-wrap a {font-size: 14px;}
   .footer-icons {margin-top: 47px;}
@@ -1177,8 +1184,8 @@ h3.propertytxt {
 
 @media only screen and (max-width: 1280px) {
   .navbar-expand-lg .navbar-nav {width: 980px;}
-  .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav .show>.nav-link {font-size: 16px;line-height: 16px;padding: 14px 10px!important;}
-  .navbar-light .navbar-nav .nav-item:nth-child(2) .nav-link:after {top: 10px;}
+  /* .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav .show>.nav-link {font-size: 16px;line-height: 16px;padding: 14px 10px!important;} */
+  .navbar-light .navbar-nav .nav-item:nth-child(2) .nav-link:after {top: 8px;right: 10px;}
   .nav-item {width: auto;}
   .toll-wrap a {font-size: 12px;}
   .buy-search-box label, .form-control {font-size: 14px;}
@@ -1215,7 +1222,7 @@ h3.propertytxt {
   .main-logo img {height: auto !important;min-width: 120px !important;} 
   .navbar-expand-lg .navbar-nav {width: 700px;}
   .nav-item {margin: 0;}
-  .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav .show>.nav-link {font-size: 14px;line-height: 14px;}
+  .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav .show>.nav-link {font-size: 14px;line-height: 14px;padding: 9px 1rem!important;}
   .sell-btn a {padding: 10px 0;width: 140px;font-size: 14px;line-height: 14px;}
   /* .see-more-text p, .visit-text-wrap >p:first-child {font-size: 10px;} */
   .inqury-btn a {padding: 10px 40px;line-height: 14px;font-size: 14px;}
@@ -1410,9 +1417,9 @@ h3.propertytxt {
     flex-direction: column;
     justify-content: center;
   }
-  .main-logo {
+  /* .main-logo {
     width: 140px;
-  }
+  } */
   .visit-text {
     margin: 5px auto 0;
     display: none;
@@ -1456,7 +1463,7 @@ h3.propertytxt {
   .navbar-light .navbar-nav .nav-item:nth-child(2) .nav-link:after {display: none;}
   .nav-item a i {margin-left: 10px;}
   .dropdown-menu {border:unset;width: 100% !important;background: #e4ce7e;border-bottom: 1px solid #c9b363;box-shadow: unset;}
-  .dropdown-menu .dropdown-item {padding: 14px 15px;font-size: 14px;text-align: left;}
+  .dropdown-menu .dropdown-item {font-size: 14px;text-align: left;}
   .dropdown-menu li:last-child .dropdown-item {color: #1e2125;}
   .footer-links {width: 100%;}
   .footer-sec1 {width: 50%;}
@@ -1492,6 +1499,7 @@ h3.propertytxt {
   .video-name {font-size: 18px;line-height: 24px;}
 
   .selltxt p, .final_msg_wrap .error_msg, .final_msg_wrap .thankyou_msg {line-height: 24px;font-size: 16px;}
+  .header.sticky {width: 100%;position: fixed;box-shadow: 0px 0px 10px #ccc;}
 }
 
 @media only screen and (max-width: 768px) {
@@ -1787,7 +1795,8 @@ h3.propertytxt {
   .sell-search-box .contact-btn a {padding:10px;}
   .footer-sec1 .toll-wrap p:nth-last-child(2) br ~ br {display:none;}
   .buttons-wrap {position:relative;z-index:99;}
-  .main-logo img {min-width: 150px !important;}
+  .main-logo img {min-width: 150px !important; height: auto !important;}
+  .header.sticky .main-logo img {height: auto !important;}
 }
 
 @media only screen and (max-width: 430px) {

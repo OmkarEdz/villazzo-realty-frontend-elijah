@@ -1,59 +1,38 @@
-import React from "react"
-import Image from "next/image"
-import axios from 'axios';
+import React, { useState, useEffect } from "react"
 import NextImage from "./image"
+import axios from 'axios';
 
-const PropertyCard = ({ articles }) => {
-    // const propertiesData = properties;
-    // const leftArticlesCount = Math.ceil(articles.length / 5)
-    // const leftArticles = articles.slice(0, leftArticlesCount)
-    const myLoader = ({ src, width, quality }) => {
-        return `${src}?w=${width}&q=${quality || 75}`
+const PropertyCard = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    try {
+      const response = await axios.get('http://localhost:1337/api/properties'); // Replace with the actual endpoint for your collection
+      setData(response.data);
+    } catch (error) {
+      console.log(error);
     }
- 
+  };
+  console.log(data);
   return (
     <>
       <div className="property-wrap property-list-wrap">
-      <div>
-          {/*{leftArticles.map((article, i) => {
-            return (
-               <Card article={article} key={`article__left__${article.attributes.slug}`}/> 
-            )
-          })}*/}
-        </div>
-        {/* <div>{ properties.attributes.location }</div> */}
-        {/* {propertiesData.map((property, index) => (
-        <div className="property-box" key={index}>
+        {properties.map((property) => (
+        <div className="property-box">
             <p className="img_Wrap">
-                <Image
-                    loader={myLoader}
-                    src
-                    alt="Image"
-                    layout="fill"
-                />
-                <NextImage image={property.attributes.image} />
+              <NextImage image={property.attributes.image} />
             </p>
-            <h4 class="pro-name">{property.attributes.location}</h4>
+            <h4 className="pro-name">{property.attributes.location}</h4>
             <div className="pro-text">{property.attributes.Content}</div>
         </div>
-        ))} */}
+        ))}
       </div>
     </>
   )
 }
 
-export async function getStaticProps() {
-    // Run API calls in parallel
-    const propertiesRes = await Promise.all([
-      fetchAPI("/properties", { populate: "*" }),
-    ])
-  
-    return {
-      props: {
-        properties: propertiesRes.data,
-      },
-      revalidate: 1,
-    }
-}
-  
 export default PropertyCard
