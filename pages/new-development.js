@@ -159,10 +159,10 @@ const NewDevelopment = ({
 		<div className="container">
 			<div className="buttons-wrap video-wrapper team-wrapper dev-wrapper">
 				<h1 className="sold-heading">NEW DEVELOPMENT</h1>
-				<div className="property-wrap">
+				<div className="property-wrap addHovEfft">
 					{newdevelopmentpage.attributes.Proprties.map((element, index) => (
 					<div key={index} className="property-box">
-						<p className="img_Wrap">
+						<div className="img_Wrap">
 							<Image
 								loader={myLoader}
 								// src={process.env.NEXT_PUBLIC_STRAPI_API_URL}
@@ -172,7 +172,11 @@ const NewDevelopment = ({
 								layout="fill"
 								alt="Villazzo"
 							/>
-						</p>
+              <div className="onHoverNewDev">
+              <span className="properStatus">{element.OnHoverContent  }</span>
+                <span className="properYear">{element.OnHoverDate}</span>
+              </div>
+						</div>
 						<h4 className="pro-name">{element.heading}</h4>
             <div className="pro-text" dangerouslySetInnerHTML={{ __html: element.subheading }}></div>
 					</div>

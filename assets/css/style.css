@@ -911,8 +911,17 @@ h3.propertytxt {
 .number:hover, .email:hover {color: #f8de7f;}
 .email:hover:before, .number:hover:before {background-color:#f8de7f;}
 .property-wrap{display: flex;justify-content: space-between;flex-wrap: wrap;margin-top: 70px;}
-.property-box{width: 32%;text-align: center;margin-bottom: 60px;}
-.img_Wrap {margin-bottom: 30px;}
+.property-box{width: 32%;text-align: center;margin-bottom: 60px;cursor:pointer;}
+.img_Wrap {margin-bottom: 30px;position:relative;}
+.img_Wrap img {transition:0.5s all;}
+.addHovEfft .property-box:hover .img_Wrap img {filter:brightness(0.4);}
+.onHoverNewDev {width: calc(100% - 40px);height: calc(100% - 40px);position: absolute;top: 0;left: 0;right: 0;bottom: 0;margin: auto;flex-direction:column;border: 2px solid #f8de7f;display: flex;padding: 20px;align-items: center;justify-content: flex-end;color: #fff;opacity:0;transition:0.5s all;}
+.onHoverNewDev .properStatus {font-size: 22px;font-weight: 400;font-family: 'Lato', sans-serif;color: #fff;}
+.onHoverNewDev .properYear {font-size: 28px;font-weight: 600;font-family: 'Lato', sans-serif;color: #f8de7f;}
+.addHovEfft .property-box:hover .onHoverNewDev {opacity:1;}
+.addHovEfftTwo .onHoverNewDev {border-color: transparent;}
+.addHovEfftTwo .img_Wrap:before {content: '';position: absolute;width: 103%;height: 103%;left: -1.5%;top: 0;bottom:0;margin:auto;border: 2px solid #f8de7f;opacity: 0;transition: 0.5s all;}
+.addHovEfftTwo .property-box:hover .img_Wrap:before {opacity: 1;}
 .pro-name{font-size: 28px;letter-spacing: 1px;line-height: 40px;text-transform: uppercase;color: #222222;font-weight: 700;font-family: "Lato",ui-sans-serif;text-align: center;}
 .pro-text {font-size: 22px;letter-spacing: 1px;line-height: 32px;color: #222222;font-weight: 400;font-family: "Lato",ui-sans-serif;text-align: center;margin-bottom: 0;}
 .property-box img{width: 100% !important;height: 340px !important;object-fit: cover;}
@@ -931,6 +940,11 @@ h3.propertytxt {
 .inside-wrap .meet-left .meet-left-img span {width: 260px !important;height: 260px !important;}
 .inside-wrap .meet-wrap {margin-top:40px;}
 .inside-wrap .meet-left:first-child .meet-left-img {margin: 0px auto 35px;}
+.tendealsWrap .pro-name {padding: 0px 20px 5px;}
+.tendealsWrap .pro-dashed-price {color: #f8de7f;font-weight: 500;font-family: 'Lato',sans-serif;margin-bottom: 5px;font-size: 18px;text-decoration: line-through;}
+.tendealsWrap .pro-price {font-weight: 500;font-family: 'Lato',sans-serif;}
+.tendealsWrap .pro-link.inqury-btn {justify-content: center;}
+.tendealsWrap .pro-link.inqury-btn .pro-link-btn {color: #212529;}
 /*TeamInside css End*/
 
 /*reviews css start*/

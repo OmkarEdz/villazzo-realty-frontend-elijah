@@ -10,11 +10,11 @@ import axios from 'axios'
 
 const TopDeals = ({
   global,
-  newdevelopmentpage,
+  toptendeal,
   footerData,
   navigation,
 }) => {
-	// let newDevPropList = newdevelopmentpage.attributes.Proprties
+	// let newDevPropList = toptendeal.attributes.Proprties
 	// let mainnewDevPropList = []
 	// newDevPropList.forEach((element) => {
 	// 	mainnewDevPropList.push(element)
@@ -160,22 +160,26 @@ const TopDeals = ({
 		<div className="container">
 			<div className="buttons-wrap video-wrapper team-wrapper dev-wrapper">
 				<h1 className="sold-heading">Top 10 Deals</h1>
-				<div className="property-wrap">
-					{newdevelopmentpage.attributes.Proprties.map((element, index) => (
+				<div className="property-wrap tendealsWrap">
+					{toptendeal.attributes.Properties.map((element, index) => (
 					<div key={index} className="property-box">
 						<p className="img_Wrap">
 							<Image
 								loader={myLoader}
 								// src={process.env.NEXT_PUBLIC_STRAPI_API_URL}
-                src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${element.propertyImageURL}`}
+                src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${element.PropertyImg}`}
                 key={`element${index}`}
 								className="img"
 								layout="fill"
 								alt="Villazzo"
 							/>
 						</p>
-						<h4 className="pro-name">{element.heading}</h4>
-            <div className="pro-text" dangerouslySetInnerHTML={{ __html: element.subheading }}></div>
+						<h4 className="pro-name">{element.PropertyName}</h4>
+            <p className="pro-dashed-price">{element.MainPrice}</p>
+            <p className="pro-price">{element.MainPrice}</p>
+            <p className="pro-link inqury-btn">
+              <a href={element.ButtonLink} className="pro-link-btn">VIEW</a>
+            </p>
 					</div>
 					))}
 				</div>
@@ -307,12 +311,12 @@ export async function getStaticProps() {
   // Run API calls in parallel
   const [
     globalRes,
-	newdevelopmentpageRes,
+	toptendealRes,
     footerRes,
     navigationRes,
   ] = await Promise.all([
     fetchAPI("/global", { populate: "*" }),
-	fetchAPI("/newdevelopmentpage", { populate: "*" }),
+	fetchAPI("/toptendeal", { populate: "*" }),
     fetchAPI("/footer", { populate: "deep" }),
     fetchAPI("/header-nav", { populate: "*" }),
   ])
@@ -320,7 +324,7 @@ export async function getStaticProps() {
   return {
     props: {
       global: globalRes.data,
-	  newdevelopmentpage: newdevelopmentpageRes.data,
+	  toptendeal: toptendealRes.data,
       footerData: footerRes.data,
       navigation: navigationRes.data,
     },
