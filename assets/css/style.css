@@ -919,9 +919,11 @@ h3.propertytxt {
 .onHoverNewDev .properStatus {font-size: 22px;font-weight: 400;font-family: 'Lato', sans-serif;color: #fff;}
 .onHoverNewDev .properYear {font-size: 28px;font-weight: 600;font-family: 'Lato', sans-serif;color: #f8de7f;}
 .addHovEfft .property-box:hover .onHoverNewDev {opacity:1;}
-.addHovEfftTwo .onHoverNewDev {border-color: transparent;}
+.addHovEfftTwo .onHoverNewDev {border-color: transparent;opacity: 1;}
 .addHovEfftTwo .img_Wrap:before {content: '';position: absolute;width: 103%;height: 103%;left: -1.5%;top: 0;bottom:0;margin:auto;border: 2px solid #f8de7f;opacity: 0;transition: 0.5s all;}
 .addHovEfftTwo .property-box:hover .img_Wrap:before {opacity: 1;}
+.addHovEfftTwo .img_Wrap:before {opacity: 1;}
+.addHovEfft.addHovEfftTwo .property-box .img_Wrap img {filter: brightness(0.4);}
 .pro-name{font-size: 28px;letter-spacing: 1px;line-height: 40px;text-transform: uppercase;color: #222222;font-weight: 700;font-family: "Lato",ui-sans-serif;text-align: center;}
 .pro-text {font-size: 22px;letter-spacing: 1px;line-height: 32px;color: #222222;font-weight: 400;font-family: "Lato",ui-sans-serif;text-align: center;margin-bottom: 0;}
 .property-box img{width: 100% !important;height: 340px !important;object-fit: cover;}
@@ -1563,6 +1565,12 @@ h3.propertytxt {
   .form-item {width:100%;}
 
   .property-box img {height: 250px !important;}
+  .onHoverNewDev {width: calc(100% - 20px);height: calc(100% - 20px);border: 1px solid #f8de7f;}
+  .onHoverNewDev .properStatus {font-size: 12px;}
+  .onHoverNewDev .properYear  {font-size: 18px;}
+  .tendealsWrap .pro-name {padding: 0 10px 0px;}
+  .tendealsWrap .pro-dashed-price, .tendealsWrap .pro-price {font-size: 14px;}
+  .tendealsWrap .pro-link.inqury-btn .pro-link-btn {font-weight: 500;}
 }
 
 @media only screen and (max-width: 767px) {
@@ -1720,6 +1728,7 @@ h3.propertytxt {
     line-height: 14px;
     text-align: left;
         border-bottom: 1px solid #c9b363;
+        margin: 0px;
   }
   .navbar-light .navbar-nav .nav-link .arrow {
     float:right;

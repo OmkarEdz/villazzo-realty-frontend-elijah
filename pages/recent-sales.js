@@ -7,7 +7,7 @@ import Link from 'next/link'
 import axios from 'axios'
 
 
-const NewDevelopment = ({
+const Recentsales = ({
   global,
   recentsale,
   footerData,
@@ -330,4 +330,4 @@ export async function getStaticProps() {
   }
 }
 
-export default NewDevelopment
+export default Recentsales
