@@ -1452,7 +1452,10 @@ h3.propertytxt {
   .navbar-light .navbar-nav .nav-link {
     border-bottom: 1px solid #c9b363;
     text-align: left !important;
+    margin: 0px;
+    width: 100%;
   }
+  .navbar-light .navbar-nav .nav-item:hover .dropdown-menu {margin: 0px;padding: 0px;box-shadow: none;}
   .mb-drop a {
     color: #fff !important;
   }
