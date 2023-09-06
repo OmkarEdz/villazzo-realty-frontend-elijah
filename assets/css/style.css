@@ -406,7 +406,7 @@ img {
   width: 45%;
   justify-content: space-between;
 }
-.inqury-btn a {
+.inqury-btn a, #header .inqury-btn a {
   color: #fff;
     text-decoration: none;
     background-color: #f8de7f;
@@ -418,7 +418,8 @@ img {
     line-height: 29px;
     border: 1px solid #f8de7f;
 }
-.inqury-btn a:hover {
+#header .inqury-btn a {color: #212529;padding: 12px 77px !important;min-width: unset;max-width: unset;font-family: Gotham,sans-serif;}
+.inqury-btn a:hover, #header .inqury-btn a:hover {
   color: #000;background-color: #fff;
 }
 .bg-light {
@@ -443,7 +444,7 @@ img {
 .visit-text-wrap:hover p, .visit-text-wrap:hover .drop-down a {color: #f8de7f !important;}
 .see-more-text-wrap:hover > p, .see-more-text-wrap:hover > .drop-down a {color: #f8de7f;}
 .sell-btn a {
-color:#212529;
+color:#fff;
     text-decoration: none;
     border: 1px solid #f8de7f;
     background-color: #f8de7f;
@@ -454,7 +455,7 @@ color:#212529;
     transition-duration: .5s;
     letter-spacing: 0px;
     text-align: center;
-    font-family: 'Gotham Medium',sans-serif;
+    font-family: Gotham,sans-serif;
     box-shadow: 0 0 5px 0 rgb(0 0 0 / 20%);
     display: block;
     line-height: 31px;
@@ -1185,7 +1186,7 @@ h3.propertytxt {
   .bg-img {min-height: 700px;}
   /* .villazzo-logo-wrap {width: 200px;} */
   .inquiry a.desktop-inquiry-call {font-size: 25px;margin-bottom: 0px;}
-  .inqury-btn a {line-height: 20px;font-size: 16px;height: unset;}
+  .inqury-btn a, #header .inqury-btn a {line-height: 20px;font-size: 16px;height: unset;}
   .buttons-wrap .sell-buy-rent-buttons {margin: 210px auto auto;}
   /* .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav .show>.nav-link {font-size: 18px;} */
   .navbar-light .navbar-nav .nav-item:nth-child(2) .nav-link:after {top: 12px;}
@@ -1242,6 +1243,7 @@ h3.propertytxt {
   .sell-btn a {padding: 10px 0;width: 140px;font-size: 14px;line-height: 14px;}
   /* .see-more-text p, .visit-text-wrap >p:first-child {font-size: 10px;} */
   .inqury-btn a {padding: 10px 40px;line-height: 14px;font-size: 14px;}
+  #header .inqury-btn a {padding: 10px 40px !important;line-height: 14px !important;font-size: 14px !important;}
   .see-more-text p.drop-down, .visit-text p.drop-down {font-size: 12px;}
   .toll-wrap {width: 90%;}
   .footer-sec1 .toll-wrap, .footer-sec1 .toll-wrap p, .navigate-wrap p, .navigate-sec1 a, .toll-wrap a {font-size: 12px;}
@@ -1373,6 +1375,9 @@ h3.propertytxt {
   }
   .inqury-btn a {
     padding:10px 30px;
+  }
+  #header .inqury-btn a {
+    padding:10px 30px !important;
   }
   .header-content {
     width: 250px;
@@ -1611,6 +1616,14 @@ h3.propertytxt {
     font-weight: bold;
     letter-spacing:1px;
     padding:10px 15px;
+  }
+  #header .inqury-btn a{
+    display:block;
+    text-align: center;
+    font-size: 14px !important;
+    font-weight: bold;
+    letter-spacing:1px;
+    padding:10px 15px !important;
   }
   .inquiry-wrap {
     width: auto;
