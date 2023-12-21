@@ -21,10 +21,12 @@ const Videos = ({
     })
     
     const moreBtn = React.useRef(null);
-    // moreBtn.current.classList.remove("show_BTN");
-    // if (videospage.attributes.video.length > 4) {
-    //   moreBtn.current.classList.add("show_BTN");
-    // }
+    if (moreBtn.current) {
+      moreBtn.current.classList.remove("show_BTN");
+      if (videospage.attributes.video.length > 4) {
+        moreBtn.current.classList.add("show_BTN");
+      }
+    }
 
     const myLoader = ({ src, width, quality }) => {
       return `${src}?w=${width}&q=${quality || 75}`

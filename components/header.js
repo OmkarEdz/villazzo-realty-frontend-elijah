@@ -240,9 +240,9 @@ const Header = ({ navigation, global }) => {
                       ))}
                     </div>
                   </div>
-                  <div className="visit-text-wrap favLink">
+                  {/* <div className="visit-text-wrap favLink">
                     <p><a href="/favourites">FAVORITES <i className="fa fa-star"></i></a></p>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
