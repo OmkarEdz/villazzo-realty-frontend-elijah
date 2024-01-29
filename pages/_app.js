@@ -13,9 +13,9 @@ export const GlobalContext = createContext({})
 
 const MyApp = ({ Component, pageProps }) => {
   const { global } = pageProps
-  // setTimeout(() => {
-  //   document.body.classList.add("loadVdo");
-  // }, 2500);  
+  setTimeout(() => {
+    document.body.classList.add("loadVdo");
+  }, 1000);  
   return (
     <>
       {/* <Head>
