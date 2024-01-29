@@ -152,7 +152,7 @@ const Footer = ({ footerProp }) => {
                           <a href={value.URL} key={`left-links${index}`}>{value.Label}</a>
                         </div>
                       ))}
-                      <div className="navigate-sec1"><a onClick={onAddClick}>CONTACT</a></div>
+                      <div className="navigate-sec1"><a href="https://www.villazzorealty.com/contact">CONTACT</a></div>
                     </div>
                     <div className="navigate-links">
                       {footerProp.attributes.navigateLinksRight.map((value, index) => (
