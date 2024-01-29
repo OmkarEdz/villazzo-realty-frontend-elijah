@@ -223,7 +223,7 @@ const Home = ({
                           ) : ("")}
                         </li>
                       ))}
-                      <li className="nav-item cursor"><a className="nav-link"  onClick={onAddClick}>Contact Us</a></li>
+                      <li className="nav-item cursor"><a className="nav-link"  href="https://www.villazzorealty.com/contact">Contact Us</a></li>
                     </ul>
                   </div>
                 </div>
@@ -355,7 +355,7 @@ const Home = ({
                       )}
                     </li>
                   ))}
-                  <li className="nav-item cursor"><a className="nav-link"  onClick={onAddClick}>Contact Us</a></li>
+                  <li className="nav-item cursor"><a className="nav-link"  href="https://www.villazzorealty.com/contact">Contact Us</a></li>
                 </ul>
               </div>
             </div>

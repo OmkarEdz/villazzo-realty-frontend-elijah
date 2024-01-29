@@ -201,7 +201,7 @@ const Header = ({ navigation, global }) => {
                           ) : ("")}
                         </li>
                       ))}
-                      <li className="nav-item cursor" onClick={onAddClick}><a className="nav-link ">Contact Us</a></li>
+                      <li className="nav-item cursor"><a className="nav-link " href="https://www.villazzorealty.com/contact">Contact Us</a></li>
                     </ul>
                   </div>
                 </div>
@@ -333,7 +333,7 @@ const Header = ({ navigation, global }) => {
                       )}
                     </li>
                   ))}
-                  <li className="nav-item cursor" onClick={onAddClick}><a className="nav-link ">Contact Us</a></li>
+                  <li className="nav-item cursor"><a className="nav-link " href="https://www.villazzorealty.com/contact">Contact Us</a></li>
                 </ul>
               </div>
             </div>
