@@ -184,8 +184,10 @@ const Header = ({ navigation, global }) => {
                     <ul className="navbar-nav">
                       {mainNavigation.map((menu, index) => (
                         <li className="nav-item" key={`nav-menu-mobile${index}`}>
-                          <a href={menu.URL} key={`nav-link-mobile${index}`} className={`nav-link ${menu.showIcon === "Yes" ? "showIcon" : ""}`} onClick={() => subMenuToggleMenu((subMenuClass = !subMenuClass))}>
+                          <a href={menu.URL} key={`nav-link-mobile${index}`} className={`nav-link ${menu.showIcon === "Yes" ? "showIcon" : ""}`}>
                             {menu.Label}
+                          </a>
+                          <a href="javascript:;" key={`nav-link-mobile${index}`} className={`nav-link no-pad ${menu.showIcon === "Yes" ? "showIcon" : ""}`} onClick={() => subMenuToggleMenu((subMenuClass = !subMenuClass))}>
                             {menu.submenu.length ? <span className="arrow"><i className="fa fa-chevron-down" aria-hidden="true"></i></span> : ""}
                           </a>
                           {menu.submenu.length ? (

@@ -176,12 +176,12 @@ img {
   height: 100% !important;
   object-fit: cover !important;
 }
-.homepage-image video{
+/* .homepage-image video{
   opacity:0;
 }
 .loadVdo .homepage-image video{
   opacity:1;
-}
+} */
 .bg-img {
   min-height: 1057px;
   /* background:url('../images/video/desktop.mp4'); */
@@ -387,7 +387,7 @@ img {
   font-size:17px;
   /* border-bottom: solid 1px #f0e6c7; */
   font-family: 'Gotham', sans-serif;
-  text-align: left;
+  text-align: center;
   line-height: 18px;
   color: #222;
 }
@@ -915,7 +915,7 @@ h3.propertytxt {
 .broker {margin-bottom: 0px;}
 .number:hover, .email:hover {color: #f8de7f;}
 .email:hover:before, .number:hover:before {background-color:#f8de7f;}
-.property-wrap{display: flex;justify-content: space-between;flex-wrap: wrap;margin-top: 70px;}
+.property-wrap{display: flex;justify-content: space-between;flex-wrap: wrap;margin-top: 70px;width: 100%;}
 .property-box{width: 32%;text-align: center;margin-bottom: 60px;cursor:pointer;}
 .img_Wrap {margin-bottom: 30px;position:relative;}
 .img_Wrap img {transition:0.5s all;}
@@ -980,7 +980,8 @@ h3.propertytxt {
 /*reviews css end*/
 
 /* new develop css start */
-.sold-heading, .video-heading{margin-top: 70px;font-size: 55px;line-height: 55px;text-transform: uppercase;color: #222222;font-weight: 300;font-family: "Gotham",sans-serif;text-align: center;}
+.navbar-light .navbar-nav .nav-link.no-pad, .navbar-light .navbar-nav .nav-item:nth-child(2) .nav-link.no-pad {padding:0px !important;border: unset !important;position: absolute;top: 10px;width: max-content;right: 20px;}
+.sold-heading, .video-heading{width:100%;margin-top: 70px;font-size: 55px;line-height: 55px;text-transform: uppercase;color: #222222;font-weight: 300;font-family: "Gotham",sans-serif;text-align: center;}
 .sold-by-heading {display: flex;}
 .sold-new-heading {display: flex;}
 .sold-new-heading span {display: inline-block;line-height: 0;padding-left: 10px;}
@@ -1862,6 +1863,10 @@ h3.propertytxt {
   .contact_icons_section {margin: 20px 0px;}
   .contact_icons_section .contact_icon_item {width: 100%;}
   .contact_main_pg_wrapper iframe {height: 400px;}
+
+  .sold-heading {justify-content: center;}
+  .sold-new-heading span span {width: 34px !important;height: 24px !important;}
+  .sold-new-heading span img {width: 24px !important;display: block !important;height: 24px !important;}
 }
 
 @media only screen and (max-width: 430px) {
