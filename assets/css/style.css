@@ -176,12 +176,12 @@ img {
   height: 100% !important;
   object-fit: cover !important;
 }
-/* .homepage-image video{
+.homepage-image video{
   opacity:0;
 }
 .loadVdo .homepage-image video{
   opacity:1;
-} */
+}
 .bg-img {
   min-height: 1057px;
   /* background:url('../images/video/desktop.mp4'); */
@@ -983,7 +983,7 @@ h3.propertytxt {
 .navbar-light .navbar-nav .nav-link.no-pad, .navbar-light .navbar-nav .nav-item:nth-child(2) .nav-link.no-pad {padding:0px !important;border: unset !important;position: absolute;top: 10px;width: max-content;right: 20px;}
 .sold-heading, .video-heading{width:100%;margin-top: 70px;font-size: 55px;line-height: 55px;text-transform: uppercase;color: #222222;font-weight: 300;font-family: "Gotham",sans-serif;text-align: center;}
 .sold-by-heading {display: flex;}
-.sold-new-heading {display: flex;}
+.sold-new-heading {display: flex;justify-content: center;}
 .sold-new-heading span {display: inline-block;line-height: 0;padding-left: 10px;}
 .sold-new-heading span img {width: 50px !important;filter: brightness(0.5);}
 .heading-img{width: 70px;margin-left: 10px;height: 77px;margin-top: -15px;}

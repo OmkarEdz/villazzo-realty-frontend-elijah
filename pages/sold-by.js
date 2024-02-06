@@ -168,7 +168,7 @@ const SoldBy = ({
         <Header navigation={navigation} global={global} />
 		<div className="container">
 			<div className="buttons-wrap video-wrapper team-wrapper dev-wrapper">
-				<h1 className="sold-heading sold-new-heading">Sold By <span><img src="https://admin.villazzorealty.com/uploads/villazzo_symbol_7239d937d8.png?updated_at=2023-12-18T05:24:07.430Z" alt /></span></h1>
+				<h1 className="sold-heading sold-new-heading">Sold By <span><img src="https://www.villazzorealty.com/_next/static/media/villazzo-symbol.91f471d2.png" alt="Image" /></span></h1>
 				<div className={`soldListNew property-wrap addHovEfft video-wrap ${showMore ? "show-all" : ""}`}>
 					{soldbypage.attributes.soldProperties.map((element, index) => (
 					<div key={index} className="property-box">
