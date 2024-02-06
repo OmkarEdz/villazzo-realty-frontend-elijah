@@ -984,7 +984,7 @@ h3.propertytxt {
 .sold-heading, .video-heading{width:100%;margin-top: 70px;font-size: 55px;line-height: 55px;text-transform: uppercase;color: #222222;font-weight: 300;font-family: "Gotham",sans-serif;text-align: center;}
 .sold-by-heading {display: flex;}
 .sold-new-heading {display: flex;justify-content: center;}
-.sold-new-heading span {display: inline-block;line-height: 0;padding-left: 10px;}
+.sold-new-heading span {display: inline-block; line-height: 0; width: 50px; position: relative; margin-left: 10px;}
 .sold-new-heading span img {width: 50px !important;filter: brightness(0.5);}
 .heading-img{width: 70px;margin-left: 10px;height: 77px;margin-top: -15px;}
 .heading-img span {position: unset !important;}
