@@ -159,7 +159,7 @@ const Sell = ({
             alt="Villazzo"
           /> */}
           <div className="blankDiv"></div>
-          <video loop muted autoPlay={"autoplay"} playsinline>
+          <video loop muted playsinline autoPlay={"autoplay"} playsinline>
               <source src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${global.attributes.videoURL}`}  type="video/mp4" />
               <source src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${global.attributes.videoURL}`} type="video/webm" />
           </video>

@@ -1902,7 +1902,7 @@ h3.propertytxt {
 @media not all and (min-resolution:.001dpcm)
   { @supports (-webkit-appearance:none) and (stroke-color:transparent) {
     @media only screen and (max-width: 580px) {
-      .homepage-image video {position: absolute;left: 0;top: 0;}
+      .homepage-image video {position: fixed;left: 0;top: 0;}
     }
   }
 }
