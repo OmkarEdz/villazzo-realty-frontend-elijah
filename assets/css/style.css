@@ -980,7 +980,7 @@ h3.propertytxt {
 /*reviews css end*/
 
 /* new develop css start */
-.navbar-light .navbar-nav .nav-link.no-pad, .navbar-light .navbar-nav .nav-item:nth-child(2) .nav-link.no-pad {padding:0px !important;border: unset !important;position: absolute;top: 10px;width: max-content;right: 20px;}
+.navbar-light .navbar-nav .nav-link.no-pad, .navbar-light .navbar-nav .nav-item:nth-child(2) .nav-link.no-pad {padding:0px !important;border: unset !important;position: absolute;top: 2px;right: 0px; width: 40px; height: 35px; text-align: center; display: flex; align-items: center;}
 .sold-heading, .video-heading{width:100%;margin-top: 70px;font-size: 55px;line-height: 55px;text-transform: uppercase;color: #222222;font-weight: 300;font-family: "Gotham",sans-serif;text-align: center;}
 .sold-by-heading {display: flex;}
 .sold-new-heading {display: flex;justify-content: center;}
