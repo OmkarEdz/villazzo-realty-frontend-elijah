@@ -147,7 +147,7 @@ const Contact = ({
               <div className="contact_icon_item">
                 <p className="contact_icon"><i className="fa-solid fa-clock"></i></p>
                 <p className="contact_text">
-                MON -FRI<br/>9AM - 5PM EST
+                MON - SUN<br/>9AM - 5PM EST
                 </p>
               </div>
               <div className="contact_icon_item">
