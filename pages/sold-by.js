@@ -172,7 +172,7 @@ const SoldBy = ({
           <span>
             <Image
               loader={myLoader}
-              src="https://www.villazzorealty.com/_next/static/media/villazzo-symbol.91f471d2.png"
+              src="https://admin.villazzorealty.com/uploads/V_6cef1d5544.png"
               layout="fill"
               alt="Villazzo"
             />

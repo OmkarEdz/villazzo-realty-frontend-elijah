@@ -157,7 +157,7 @@ const Recentsales = ({
       <div className="bg-img bg-white new_dev_pg_wrap">
         <Header navigation={navigation} global={global} />
 		<div className="container">
-			<div className="buttons-wrap video-wrapper team-wrapper dev-wrapper">
+			<div className="buttons-wrap video-wrapper team-wrapper dev-wrapper recent_sales_wrap">
 				<h1 className="sold-heading">RECENT SALES</h1>
 				<div className="property-wrap addHovEfft addHovEfftTwo">
 					{recentsale.attributes.Properties.map((element, index) => (

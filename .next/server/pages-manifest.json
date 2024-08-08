@@ -2,7 +2,5 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/christian-jagodzinski": "pages/christian-jagodzinski.js",
-  "/lisa-blake": "pages/lisa-blake.js",
-  "/": "pages/index.js"
+  "/property-one": "pages/property-one.js"
 }

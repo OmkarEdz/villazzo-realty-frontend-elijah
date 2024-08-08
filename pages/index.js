@@ -375,6 +375,7 @@ const Home = ({
             </div>
         </div>
       </div>
+      
       <div ref={navRef} id="popover" className="main_popup hide">
             <div className="custom_model">
               <div className="custom_model_dialog">
@@ -482,6 +483,15 @@ const Home = ({
               </div>
             </div>
           </div>
+        <div className="home-team-img">
+          <Image
+            loader={myLoader}
+            src={getStrapiMedia(homepage.attributes.teamImg)}
+            className="hometeamimg"
+            layout="fill"
+            alt="Villazzo"
+          />
+      </div>
       <Footer footerProp={footerData} />
     </>
   )

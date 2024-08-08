@@ -141,7 +141,7 @@ const Contact = ({
               <div className="contact_icon_item">
                 <p className="contact_icon"><i className="fa-solid fa-envelope"></i></p>
                 <p className="contact_text">
-                <a href="mailto:realty@villazzo.com">REALTY@VILLAZZO.COM</a>
+                <a href="mailto:villazzorealty@villazzo.com">VILLAZZOREALTY@VILLAZZO.COM</a>
                 </p>
               </div>
               <div className="contact_icon_item">

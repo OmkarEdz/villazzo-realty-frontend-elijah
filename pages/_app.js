@@ -2,6 +2,8 @@ import App from "next/app"
 import Head from "next/head"
 import "../assets/css/bootstrap.min.css"
 import "../assets/css/font-awesome.css"
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import "../assets/css/style.css"
 import { createContext } from "react"
 import { fetchAPI } from "../lib/api"

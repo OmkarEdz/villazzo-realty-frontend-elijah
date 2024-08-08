@@ -15,11 +15,6 @@
   ],
   "rootMainFiles": [],
   "pages": {
-    "/": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/index.js"
-    ],
     "/_app": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
@@ -30,15 +25,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/christian-jagodzinski": [
+    "/property-one": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/christian-jagodzinski.js"
-    ],
-    "/lisa-blake": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/lisa-blake.js"
+      "static/chunks/pages/property-one.js"
     ]
   },
   "ampFirstPages": []
