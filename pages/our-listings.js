@@ -173,6 +173,7 @@ const TopDeals = ({
 								layout="fill"
 								alt="Villazzo"
 							/>
+              <a href={element.PropertyPageLink} className="page_link"></a>
 						</p>
 						<h4 className="pro-name">{element.PropertyName}</h4>
             <p className="pro-price">{element.PropertyDesc}</p>

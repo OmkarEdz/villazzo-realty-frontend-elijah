@@ -1160,6 +1160,8 @@ h3.propertytxt {
 .pro_det_row_item .pro_det_lbl {text-transform: uppercase;font-size: 20px;font-family: 'Gotham Medium';}
 .our-list-wrap .map_wrap {line-height: 0;}
 .our-list-wrap .map_wrap iframe {height: 600px;width: 100%;}
+.our-list-wrap .img_Wrap {margin-bottom: 15px;}
+.our-list-wrap .img_Wrap .page_link {width: 100%;height: 100%;position: absolute;top: 0;left: 0;}
 
 @media screen and (min-width: 1024px), screen and (max-height: 800px) {
   /* .custom_model_content {padding: 25px 35px 35px;} */
