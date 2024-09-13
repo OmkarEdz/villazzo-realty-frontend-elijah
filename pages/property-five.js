@@ -225,7 +225,7 @@ const TopDeals = ({
               ))}
             </Slider>
             <Slider {...settingsNav} className="slider-nav" ref={sliderNavRef}>
-              {propertyfive.attributes.PropertyImgs.map((element, index, array) => (
+              {propertyfive.attributes.PropertyImg.map((element, index, array) => (
                 <div key={index} className="slide-img">
                     <Image
                       loader={myLoader}
