@@ -220,7 +220,7 @@ const TopDeals = ({
                     layout="fill"
                     alt="Villazzo"
                   />
-                  <p className="for_sell_wrap">For Sell</p>
+                  <p className="for_sell_wrap">{propertytwo.attributes.PropertyImgDetails.PropertyStatus}</p>
               </div>
               ))}
             </Slider>
