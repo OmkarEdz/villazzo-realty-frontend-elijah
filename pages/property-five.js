@@ -209,7 +209,7 @@ const TopDeals = ({
           <>
           <div className="pro_det_img_wrap">
             <Slider {...settingsFor} className="slider-for" ref={sliderForRef}>
-              {propertyfive.attributes.PropertyImgs.map((element, index, array) => (
+              {propertyfive.attributes.PropertyImg.map((element, index, array) => (
               <div key={index} className="slide-img">
                   <Image
                     loader={myLoader}
