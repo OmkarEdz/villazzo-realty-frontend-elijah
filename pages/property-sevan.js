@@ -12,7 +12,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 const TopDeals = ({
   global,
-  propertysevan,
+  propertyseven,
   footerData,
   navigation,
 }) => {
@@ -209,7 +209,7 @@ const TopDeals = ({
           <>
           <div className="pro_det_img_wrap">
             <Slider {...settingsFor} className="slider-for" ref={sliderForRef}>
-              {propertysevan.attributes.PropertyImg.map((element, index, array) => (
+              {propertyseven.attributes.PropertyImg.map((element, index, array) => (
               <div key={index} className="slide-img">
                   <Image
                     loader={myLoader}
@@ -220,12 +220,12 @@ const TopDeals = ({
                     layout="fill"
                     alt="Villazzo"
                   />
-                  <p className="for_sell_wrap">{propertysevan.attributes.PropertyImgDetails.PropertyStatus}</p>
+                  <p className="for_sell_wrap">{propertyseven.attributes.PropertyImgDetails.PropertyStatus}</p>
               </div>
               ))}
             </Slider>
             <Slider {...settingsNav} className="slider-nav" ref={sliderNavRef}>
-              {propertysevan.attributes.PropertyImg.map((element, index, array) => (
+              {propertyseven.attributes.PropertyImg.map((element, index, array) => (
                 <div key={index} className="slide-img">
                     <Image
                       loader={myLoader}
@@ -246,37 +246,37 @@ const TopDeals = ({
             <div className="pro_det_row_wrap">
               <div className="pro_det_row_item">
                 <p className="pro_det_lbl">Property Location</p>
-                <p className="pro_det_value">{propertysevan.attributes.PropertyImgDetails.PropertyLoc}</p>
+                <p className="pro_det_value">{propertyseven.attributes.PropertyImgDetails.PropertyLoc}</p>
               </div>
             </div>
             <div className="pro_det_row_wrap">
               <div className="pro_det_row_item">
                 <p className="pro_det_lbl">Bedrooms</p>
-                <p className="pro_det_value">{propertysevan.attributes.PropertyImgDetails.Bedrooms}</p>
+                <p className="pro_det_value">{propertyseven.attributes.PropertyImgDetails.Bedrooms}</p>
               </div>
               <div className="pro_det_row_item">
                 <p className="pro_det_lbl">Bathrooms</p>
-                <p className="pro_det_value">{propertysevan.attributes.PropertyImgDetails.Bathrooms}</p>
+                <p className="pro_det_value">{propertyseven.attributes.PropertyImgDetails.Bathrooms}</p>
               </div>
             </div>
             <div className="pro_det_row_wrap">
               <div className="pro_det_row_item">
                 <p className="pro_det_lbl">Price</p>
-                <p className="pro_det_value">{propertysevan.attributes.PropertyImgDetails.Price}</p>
+                <p className="pro_det_value">{propertyseven.attributes.PropertyImgDetails.Price}</p>
               </div>
             </div>
             <div className="pro_det_row_wrap">
               <div className="pro_det_row_item">
                 <p className="pro_det_lbl">Description</p>
-                <p className="pro_det_value">{propertysevan.attributes.PropertyImgDetails.Description}</p>
+                <p className="pro_det_value">{propertyseven.attributes.PropertyImgDetails.Description}</p>
               </div>
             </div>
             <div className="meet-left main-team">
                 <p className="meet-left-img">
-                  <a href={propertysevan.attributes.PropertyImgDetails.MemberLink}>
+                  <a href={propertyseven.attributes.PropertyImgDetails.MemberLink}>
                     <Image
                       loader={myLoader}
-                      src= {`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${propertysevan.attributes.PropertyImgDetails.MemberImgUrl}`}
+                      src= {`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${propertyseven.attributes.PropertyImgDetails.MemberImgUrl}`}
                       className="header_image"
                       layout="fill"
                       alt="Villazzo"
@@ -284,11 +284,11 @@ const TopDeals = ({
                   </a>
                 </p>
                 <h3 className="meet-left-name">
-                  <a href={propertysevan.attributes.PropertyImgDetails.MemberLink} className="meet-left-name-link">{propertysevan.attributes.PropertyImgDetails.MemberName}</a>
+                  <a href={propertyseven.attributes.PropertyImgDetails.MemberLink} className="meet-left-name-link">{propertyseven.attributes.PropertyImgDetails.MemberName}</a>
                 </h3>
-                <p className="broker">{propertysevan.attributes.PropertyImgDetails.MemberDes}</p>
-                <a className="number" href={`tel:${encodeURIComponent(propertysevan.attributes.PropertyImgDetails.MemberPhone)}`}>{propertysevan.attributes.PropertyImgDetails.MemberPhone}</a>
-                <a className="email" href={`mailto:${encodeURIComponent(propertysevan.attributes.PropertyImgDetails.MemberEmail)}`}>{propertysevan.attributes.PropertyImgDetails.MemberEmail}</a>
+                <p className="broker">{propertyseven.attributes.PropertyImgDetails.MemberDes}</p>
+                <a className="number" href={`tel:${encodeURIComponent(propertyseven.attributes.PropertyImgDetails.MemberPhone)}`}>{propertyseven.attributes.PropertyImgDetails.MemberPhone}</a>
+                <a className="email" href={`mailto:${encodeURIComponent(propertyseven.attributes.PropertyImgDetails.MemberEmail)}`}>{propertyseven.attributes.PropertyImgDetails.MemberEmail}</a>
             </div>
             <div className="video-btn contact-btn">
                   <a onClick={onAddClick}>Contact Us</a>
@@ -411,7 +411,7 @@ const TopDeals = ({
       </div>
 		</div>
     <div className="map_wrap">
-      <div dangerouslySetInnerHTML={{ __html: propertysevan.attributes.MapIframe }} />
+      <div dangerouslySetInnerHTML={{ __html: propertyseven.attributes.MapIframe }} />
     </div>
       </div>
       <Footer footerProp={footerData} />
@@ -423,12 +423,12 @@ export async function getStaticProps() {
   // Run API calls in parallel
   const [
     globalRes,
-    propertysevanRes,
+    propertysevenRes,
     footerRes,
     navigationRes,
   ] = await Promise.all([
     fetchAPI("/global", { populate: "*" }),
-	fetchAPI("/propertysevan", { populate: "*" }),
+	fetchAPI("/propertyseven", { populate: "*" }),
     fetchAPI("/footer", { populate: "deep" }),
     fetchAPI("/header-nav", { populate: "*" }),
   ])
@@ -436,7 +436,7 @@ export async function getStaticProps() {
   return {
     props: {
       global: globalRes.data,
-      propertysevan: propertysevanRes.data,
+      propertyseven: propertysevenRes.data,
       footerData: footerRes.data,
       navigation: navigationRes.data,
     },
