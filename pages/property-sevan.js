@@ -10,7 +10,7 @@ import axios from 'axios'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const TopDeals = ({
+const PropertySevan = ({
   global,
   propertyseven,
   footerData,
@@ -158,6 +158,8 @@ const TopDeals = ({
 
   
   const [isMounted, setIsMounted] = useState(false);
+  const [nav1, setNav1] = useState(null);
+  const [nav2, setNav2] = useState(null);
   const sliderForRef = useRef(null);
   const sliderNavRef = useRef(null);
 
@@ -173,17 +175,19 @@ const TopDeals = ({
   }, [isMounted]);
 
   const settingsFor = {
+    asNavFor: nav2,
+    ref: sliderForRef,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
     fade: true,
-    asNavFor: sliderNavRef.current,
   };
 
   const settingsNav = {
+    asNavFor: nav1,
+    ref: sliderNavRef,
     slidesToShow: 4,
     slidesToScroll: 1,
-    asNavFor: sliderForRef.current,
     arrows: true,
     dots: false,
     focusOnSelect: true,
@@ -208,7 +212,7 @@ const TopDeals = ({
         {isMounted && (
           <>
           <div className="pro_det_img_wrap">
-            <Slider {...settingsFor} className="slider-for" ref={sliderForRef}>
+            <Slider {...settingsFor} className="slider-for" asNavFor={nav2} ref={slider => setNav1(slider)}>
               {propertyseven.attributes.PropertyImg.map((element, index, array) => (
               <div key={index} className="slide-img">
                   <Image
@@ -224,7 +228,7 @@ const TopDeals = ({
               </div>
               ))}
             </Slider>
-            <Slider {...settingsNav} className="slider-nav" ref={sliderNavRef}>
+            <Slider {...settingsNav} className="slider-nav" asNavFor={nav1} ref={slider => setNav2(slider)}>
               {propertyseven.attributes.PropertyImg.map((element, index, array) => (
                 <div key={index} className="slide-img">
                     <Image
@@ -444,4 +448,4 @@ export async function getStaticProps() {
   }
 }
 
-export default TopDeals
+export default PropertySevan

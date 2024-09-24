@@ -25,6 +25,11 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
+    "/property-nine": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/property-nine.js"
+    ],
     "/property-one": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
