@@ -17,6 +17,19 @@ const Results = ({
   }
   // const MBB = {seo : "false",data:{ acid : "qwXQVWE" } };
   // function mbbMapLoaded(){ MBB.googleMaps = true; };
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = "https://d2w6u17ngtanmy.cloudfront.net/scripts/my-buying-buddy.5.0.js.gz";
+    script.async = true;
+    script.onload = () => {
+        console.log("Script loaded and ready.");
+    };
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
   return (
     <>
       <Script src="https://www.mbb2.com/version3/css/theme/acid/qwXQVWE"></Script>
@@ -40,7 +53,7 @@ const Results = ({
         </div>
         <Header navigation={navigation} global={global} />
         <div id="searchPage" className="page_layout">
-            <div id="MBBv3_ListingResults"></div>
+          <div id="MBBv3_ListingResults"></div>
         </div>
       </div>
       <Footer footerProp={footerData} />
