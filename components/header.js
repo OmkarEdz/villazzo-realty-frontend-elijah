@@ -183,11 +183,11 @@ const Header = ({ navigation, global }) => {
                   >
                     <ul className="navbar-nav">
                       {mainNavigation.map((menu, index) => (
-                        <li className="nav-item" key={`nav-menu-mobile${index}`}>
-                          <a href={menu.URL} key={`nav-link-mobile${index}`} className={`nav-link ${menu.showIcon === "Yes" ? "showIcon" : ""}`}>
+                        <li className="nav-item" key={`nav-menu-mobile-main${index}`}>
+                          <a href={menu.URL} key={`nav-link-mobile-mob${index}`} className={`nav-link ${menu.showIcon === "Yes" ? "showIcon" : ""}`}>
                             {menu.Label}
                           </a>
-                          <a href="javascript:;" key={`nav-link-mobile${index}`} className={`nav-link no-pad ${menu.showIcon === "Yes" ? "showIcon" : ""}`} onClick={() => subMenuToggleMenu((subMenuClass = !subMenuClass))}>
+                          <a href="#" key={`nav-link-mobile-mob-main${index}`} className={`nav-link no-pad ${menu.showIcon === "Yes" ? "showIcon" : ""}`} onClick={() => subMenuToggleMenu((subMenuClass = !subMenuClass))}>
                             {menu.submenu.length ? <span className="arrow"><i className="fa fa-chevron-down" aria-hidden="true"></i></span> : ""}
                           </a>
                           {menu.submenu.length ? (
@@ -212,12 +212,12 @@ const Header = ({ navigation, global }) => {
             <div className="logo-wrap">
               <div className="villazzo-logo-wrap">
                 <div className="main-logo">
-                  <Link href="/" passHref><Image
+                  <Link href="/" passHref><a><Image
                     loader={myLoader}
                     src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${global.attributes.companyLogoURL}`}
                     alt="Image"
                     layout="fill"
-                  /></Link>
+                  /></a></Link>
                 </div>
                 <div className="visit-text">
                   <div className="visit-text-wrap">

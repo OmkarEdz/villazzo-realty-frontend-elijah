@@ -19,30 +19,44 @@ const Buy = ({ global, homepage, footerData, navigation }) => {
   const currencyFormat = (num)=> {
     return '$' + num.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
   }
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = "https://d2w6u17ngtanmy.cloudfront.net/scripts/my-buying-buddy.5.0.js.gz";
-    script.async = true;
-    script.onload = () => {
-      console.log("Script loaded and ready.");
-    };
-    document.body.appendChild(script);
+  // useEffect(() => {
+  //   const script = document.createElement('script');
+  //   script.src = "https://d2w6u17ngtanmy.cloudfront.net/scripts/my-buying-buddy.5.0.js.gz";
+  //   script.async = true;
+  //   script.onload = () => {
+  //     console.log("Script loaded and ready.");
+  //   };
+  //   document.body.appendChild(script);
 
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
+  //   return () => {00
+  //     document.body.removeChild(script);
+  //   };
+  // }, []);
   return (
     <>
       <Script src="https://www.mbb2.com/version3/css/theme/acid/qwXQVWE"></Script>
       <Script id="my-script">
         {`
-          const MBB = {seo : "false",data:{ acid : "qwXQVWE" } };
-          function mbbMapLoaded(){ MBB.googleMaps = true; }
+          if (typeof MBB === 'undefined') {
+            window.MBB = { seo: "false", data: { acid: "qwXQVWE" } };
+          }
+          function mbbMapLoaded() {
+            if (typeof MBB !== 'undefined') {
+              MBB.googleMaps = true;
+            }
+          }
         `}
       </Script>
+      {/* <Script src="https://d2w6u17ngtanmy.cloudfront.net/scripts/my-buying-buddy.5.0.js.gz" defer></Script> */}
+      <Script src="https://d2w6u17ngtanmy.cloudfront.net/scripts/my-buying-buddy.5.0.js.gz" strategy="lazyOnload" onLoad={() => {
+        if (typeof MBB !== 'undefined') {
+          MBB.mbbid = 'someId'; // Set the mbbid property or any others as needed
+          mbbMapLoaded(); // Call your map loading function
+        } else {
+          console.error("MBB is not defined after loading the script.");
+        }
+      }} defer />
       <Script src="https://maps.googleapis.com/maps/api/js?callback=mbbMapLoaded&libraries=places&key=AIzaSyBjUILCWnup4zgs3JZJF6gysN4KAK5FwTQ"></Script>
-      <Script src="https://d2w6u17ngtanmy.cloudfront.net/scripts/my-buying-buddy.5.0.js.gz" defer></Script>
       <div className="bg-img">
         <div className="homepage-image">
           <div className="blankDiv"></div>
@@ -59,10 +73,7 @@ const Buy = ({ global, homepage, footerData, navigation }) => {
               <p>Villazzo is here to help acquire your dream home or condo. We have helped many clients successfully secure their new residence in South Florida. Let us do the same for you.</p>
             </div>
             <div className="buy-search-box">
-              <form id="Form-1"onSubmit={(e) => {
-    e.preventDefault();
-    router.push('https://www.villazzorealty.com/results');
-}}>
+            <form id="Form-1" onSubmit={()=> MBBv3_SubmitCustomSearchForm('Form-1','https://www.villazzorealty.com/results')}>
                 <input type="hidden" name="mls_id" value="fl133" />
                 <div className="row">
                   <div className="col-md-4">
@@ -136,7 +147,7 @@ const Buy = ({ global, homepage, footerData, navigation }) => {
                   </div>
                   <div className="col-md-2 search-icon-box">
                   {/* <input name="submit" type="button" onClick="MBBv3_SubmitCustomSearchForm('Form-1','http://www.charliesmithrealty.com/results');" value="Search!"  /> */}
-                  <input name="submit" type="button" onClick={(e) => router.push('https://www.villazzorealty.com/results')} value="Search!"  />
+                  <input name="submit" type="button" onClick={()=> MBBv3_SubmitCustomSearchForm('Form-1','https://www.villazzorealty.com/results')} value="Search!"  />
                   </div>
                 </div>  
               </form>

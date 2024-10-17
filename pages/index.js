@@ -232,12 +232,12 @@ const Home = ({
             <div className="logo-wrap">
               <div className="villazzo-logo-wrap">
                 <div className="main-logo">
-                  <Link href="/" passHref><Image
+                  <Link href="/" passHref><a><Image
                     loader={myLoader}
                     src= {`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${global.attributes.companyLogoURL}`}
                     alt="Image"
                     layout="fill"
-                  /></Link>
+                  /></a></Link>
                 </div>
                 <div className="visit-text">
                   <div className="visit-text-wrap">
@@ -364,13 +364,13 @@ const Home = ({
         <div className="buttons-wrap">
            <div className="sell-buy-rent-buttons">
                 <div className="sell-btn">
-                  <Link href="/sell">SELL</Link>
+                  <Link href="/sell"><a>SELL</a></Link>
                 </div>
                 <div className="sell-btn">
-                  <Link href="/buy">BUY</Link>
+                  <Link href="/buy"><a>BUY</a></Link>
                 </div>
                 <div className="sell-btn">
-                  <Link href="/rent">RENT</Link>
+                  <Link href="/rent"><a>RENT</a></Link>
                 </div>
             </div>
         </div>

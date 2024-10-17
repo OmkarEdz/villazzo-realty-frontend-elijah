@@ -17,30 +17,45 @@ const Results = ({
   }
   // const MBB = {seo : "false",data:{ acid : "qwXQVWE" } };
   // function mbbMapLoaded(){ MBB.googleMaps = true; };
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = "https://d2w6u17ngtanmy.cloudfront.net/scripts/my-buying-buddy.5.0.js.gz";
-    script.async = true;
-    script.onload = () => {
-        console.log("Script loaded and ready.");
-    };
-    document.body.appendChild(script);
+  // useEffect(() => {
+  //   const script = document.createElement('script');
+  //   script.src = "https://d2w6u17ngtanmy.cloudfront.net/scripts/my-buying-buddy.5.0.js.gz";
+  //   script.async = true;
+  //   script.onload = () => {
+  //       console.log("Script loaded and ready.");
+  //   };
+  //   document.body.appendChild(script);
 
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
+  //   return () => {
+  //     document.body.removeChild(script);
+  //   };
+  // }, []);
   return (
     <>
       <Script src="https://www.mbb2.com/version3/css/theme/acid/qwXQVWE"></Script>
       <Script id="my-script">
         {`
-          const MBB = {seo : "false",data:{ acid : "qwXQVWE" } };
-          function mbbMapLoaded(){ MBB.googleMaps = true; }
+          if (typeof MBB === 'undefined') {
+            window.MBB = { seo: "false", data: { acid: "qwXQVWE" } };
+          }
+          function mbbMapLoaded() {
+            if (typeof MBB !== 'undefined') {
+              MBB.googleMaps = true;
+            }
+          }
         `}
       </Script>
+      {/* <Script src="https://d2w6u17ngtanmy.cloudfront.net/scripts/my-buying-buddy.5.0.js.gz" defer></Script> */}
+      <Script src="https://d2w6u17ngtanmy.cloudfront.net/scripts/my-buying-buddy.5.0.js.gz" strategy="lazyOnload" onLoad={() => {
+        if (typeof MBB !== 'undefined') {
+          MBB.mbbid = 'someId'; // Set the mbbid property or any others as needed
+          mbbMapLoaded(); // Call your map loading function
+        } else {
+          console.error("MBB is not defined after loading the script.");
+        }
+      }} defer />
       <Script src="https://maps.googleapis.com/maps/api/js?callback=mbbMapLoaded&libraries=places&key=AIzaSyBjUILCWnup4zgs3JZJF6gysN4KAK5FwTQ"></Script>
-      <Script src="https://d2w6u17ngtanmy.cloudfront.net/scripts/my-buying-buddy.5.0.js.gz"></Script>
+      {/* <Script src="https://d2w6u17ngtanmy.cloudfront.net/scripts/my-buying-buddy.5.0.js.gz"></Script> */}
       <div className="bg-img">
         <div className="homepage-image">
           <Image
